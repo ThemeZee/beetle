@@ -88,11 +88,11 @@ F) Licenses of bundled resources
 	License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 	Copyright: 2015 WooThemes, http://www.woothemes.com
 	
-	5. Ubuntu Font - https://www.google.com/fonts/specimen/Ubuntu
-	License: Distributed under the terms of the Ubuntu Font License (http://font.ubuntu.com/ufl/)
+	5. Arimo Font - https://www.google.com/fonts/specimen/Arimo
+	License: Distributed under the terms of the Arimo Font License (http://font.ubuntu.com/ufl/)
 	Copyright: 2015 Dalton Maag
 	
-	6. Raleway Font - https://www.google.com/fonts/specimen/Raleway
+	6. Open Sans Font - https://www.google.com/fonts/specimen/Open Sans
 	License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
 	Copyright: 2015 Matt McInerney, Pablo Impallari
 	

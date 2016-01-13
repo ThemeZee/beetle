@@ -70,7 +70,7 @@ html[xmlns] .zeeflexslider .zeeslides {
  * ====================================================================================================================*/
 
 .post-slider-container {
-	margin: -1px 0 0;
+	margin: -1em 0 3em;
 	overflow: hidden;
 }
 
@@ -99,16 +99,17 @@ html[xmlns] .zeeflexslider .zeeslides {
 	float: left;
 	width: 100%;
 	height: auto;
-	max-width: 2500px;
-	max-height: 500px;
+	max-width: 1220px;
+	max-height: 400px;
 	vertical-align: top;
 }
 
 .post-slider .zeeslide .slide-post {
 	position: absolute;
 	overflow: hidden;
-	width: 100%;
-	background: rgba(0,0,0,0.3);
+	width: 60%;
+	background: #353535;
+	left: 0;
 	bottom: 0;
 	color: #fff;
 	-ms-word-wrap: break-word;
@@ -119,14 +120,13 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 .post-slider .zeeslide .slide-content {
-	padding: 2em;
+	padding: 1em 2em 1.5em;
 }
 
 .post-slider .zeeslide .entry-title {
-	font-size: 48px;
-	font-size: 3rem;
+	font-size: 24px;
+	font-size: 1.5rem;
 	color: #fff;
-	text-shadow: 0 0 10px #000;
 }
 
 .post-slider .zeeslide .entry-meta {

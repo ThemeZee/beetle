@@ -36,7 +36,7 @@ function beetle_setup() {
 	add_theme_support( 'post-thumbnails' );
 	
 	// Set detfault Post Thumbnail size
-	set_post_thumbnail_size( 840, 560, true );
+	set_post_thumbnail_size( 840, 420, true );
 
 	// Register Navigation Menu
 	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'beetle' ) );
@@ -47,7 +47,7 @@ function beetle_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'beetle_custom_background_args', array( 'default-color' => 'ffffff' ) ) );
+	add_theme_support( 'custom-background', apply_filters( 'beetle_custom_background_args', array( 'default-color' => 'cccccc' ) ) );
 	
 	// Set up the WordPress core custom header feature.
 	add_theme_support('custom-header', apply_filters( 'beetle_custom_header_args', array(
@@ -145,7 +145,7 @@ add_action( 'wp_enqueue_scripts', 'beetle_scripts' );
 function beetle_google_fonts_url() {
     
 	// Set default Fonts
-	$font_families = array('Ubuntu:200,400,600,800', 'Raleway:100,200,300,400,500,600,700,800');
+	$font_families = array('Arimo:200,400,600,800', 'Open Sans:100,200,300,400,500,600,700,800');
 
 	// Build Fonts URL
 	$query_args = array(
@@ -164,7 +164,7 @@ function beetle_google_fonts_url() {
 function beetle_add_image_sizes() {
 	
 	// Add Custom Header Image Size
-	add_image_size( 'beetle-header-image', 1920, 480, true );
+	add_image_size( 'beetle-header-image', 1230, 410, true );
 	
 	// Add different thumbnail sizes for widgets and post layouts
 	add_image_size( 'beetle-thumbnail-small', 120, 80, true );
