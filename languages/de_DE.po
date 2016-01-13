@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes + Pro Versions + Add-ons package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Poseidon\n"
+"Project-Id-Version: Beetle\n"
 "Report-Msgid-Bugs-To: http://themezee.com/\n"
 "POT-Creation-Date: 2015-12-04 11:51+0100\n"
 "PO-Revision-Date: 2015-12-04 11:52+0100\n"
@@ -162,10 +162,10 @@ msgstr ""
 #: inc/back-compat.php:49 inc/back-compat.php:61
 #, php-format
 msgid ""
-"Poseidon requires at least WordPress version 4.2. You are running version %s. "
+"Beetle requires at least WordPress version 4.2. You are running version %s. "
 "Please upgrade and try again."
 msgstr ""
-"Poseidon benötigt mindestens WordPress Version 4.2. Du verwendest Version %s. "
+"Beetle benötigt mindestens WordPress Version 4.2. Du verwendest Version %s. "
 "Bitte führe ein Update durch und versuche es erneut."
 
 #: inc/template-tags.php:177

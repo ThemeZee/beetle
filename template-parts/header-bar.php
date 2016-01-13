@@ -4,7 +4,7 @@
  *
  * Displays the top navigation and social icons menu above the main header area
  *
- * @package Poseidon
+ * @package Beetle
  */
 
 ?>

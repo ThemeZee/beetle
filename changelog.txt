@@ -1,5 +1,5 @@
 ===================================
-Poseidon Changelog
+Beetle Changelog
 ===================================
 
 Version 1.0.1

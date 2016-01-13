@@ -4,7 +4,7 @@
  *
  * Register Post Settings section, settings and controls for Theme Customizer
  *
- * @package Poseidon
+ * @package Beetle
  */
 
 
@@ -13,186 +13,186 @@
  *
  * @param object $wp_customize / Customizer Object
  */
-function poseidon_customize_register_post_settings( $wp_customize ) {
+function beetle_customize_register_post_settings( $wp_customize ) {
 
 	// Add Sections for Post Settings
-	$wp_customize->add_section( 'poseidon_section_post', array(
-        'title'    => esc_html__( 'Post Settings', 'poseidon' ),
+	$wp_customize->add_section( 'beetle_section_post', array(
+        'title'    => esc_html__( 'Post Settings', 'beetle' ),
         'priority' => 30,
-		'panel' => 'poseidon_options_panel' 
+		'panel' => 'beetle_options_panel' 
 		)
 	);
 	
 	// Add Title for latest posts setting
-	$wp_customize->add_setting( 'poseidon_theme_options[latest_posts_title]', array(
-        'default'           => esc_html__( 'Latest Posts', 'poseidon' ),
+	$wp_customize->add_setting( 'beetle_theme_options[latest_posts_title]', array(
+        'default'           => esc_html__( 'Latest Posts', 'beetle' ),
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'esc_html'
 		)
 	);
-    $wp_customize->add_control( 'poseidon_theme_options[latest_posts_title]', array(
-        'label'    => esc_html__( 'Title above Latest Posts', 'poseidon' ),
-        'section'  => 'poseidon_section_post',
-        'settings' => 'poseidon_theme_options[latest_posts_title]',
+    $wp_customize->add_control( 'beetle_theme_options[latest_posts_title]', array(
+        'label'    => esc_html__( 'Title above Latest Posts', 'beetle' ),
+        'section'  => 'beetle_section_post',
+        'settings' => 'beetle_theme_options[latest_posts_title]',
         'type'     => 'text',
 		'priority' => 1
 		)
 	);
 
 	// Add Settings and Controls for post content
-	$wp_customize->add_setting( 'poseidon_theme_options[post_content]', array(
+	$wp_customize->add_setting( 'beetle_theme_options[post_content]', array(
         'default'           => 'excerpt',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
-        'sanitize_callback' => 'poseidon_sanitize_select'
+        'sanitize_callback' => 'beetle_sanitize_select'
 		)
 	);
-    $wp_customize->add_control( 'poseidon_theme_options[post_content]', array(
-        'label'    => esc_html__( 'Post length on archives', 'poseidon' ),
-        'section'  => 'poseidon_section_post',
-        'settings' => 'poseidon_theme_options[post_content]',
+    $wp_customize->add_control( 'beetle_theme_options[post_content]', array(
+        'label'    => esc_html__( 'Post length on archives', 'beetle' ),
+        'section'  => 'beetle_section_post',
+        'settings' => 'beetle_theme_options[post_content]',
         'type'     => 'radio',
 		'priority' => 2,
         'choices'  => array(
-            'index' => esc_html__( 'Show full posts', 'poseidon' ),
-            'excerpt' => esc_html__( 'Show post excerpts', 'poseidon' )
+            'index' => esc_html__( 'Show full posts', 'beetle' ),
+            'excerpt' => esc_html__( 'Show post excerpts', 'beetle' )
 			)
 		)
 	);
 	
 	// Add Setting and Control for Excerpt Length
-	$wp_customize->add_setting( 'poseidon_theme_options[excerpt_length]', array(
+	$wp_customize->add_setting( 'beetle_theme_options[excerpt_length]', array(
         'default'           => 30,
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'absint'
 		)
 	);
-    $wp_customize->add_control( 'poseidon_theme_options[excerpt_length]', array(
-        'label'    => esc_html__( 'Excerpt Length', 'poseidon' ),
-        'section'  => 'poseidon_section_post',
-        'settings' => 'poseidon_theme_options[excerpt_length]',
+    $wp_customize->add_control( 'beetle_theme_options[excerpt_length]', array(
+        'label'    => esc_html__( 'Excerpt Length', 'beetle' ),
+        'section'  => 'beetle_section_post',
+        'settings' => 'beetle_theme_options[excerpt_length]',
         'type'     => 'text',
-		'active_callback' => 'poseidon_control_post_content_callback',
+		'active_callback' => 'beetle_control_post_content_callback',
 		'priority' => 3
 		)
 	);
 	
 	// Add Post Meta Settings
-	$wp_customize->add_setting( 'poseidon_theme_options[postmeta_headline]', array(
+	$wp_customize->add_setting( 'beetle_theme_options[postmeta_headline]', array(
         'default'           => '',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'esc_attr'
         )
     );
-    $wp_customize->add_control( new Poseidon_Customize_Header_Control(
-        $wp_customize, 'poseidon_theme_options[postmeta_headline]', array(
-            'label' => esc_html__( 'Post Meta', 'poseidon' ),
-            'section' => 'poseidon_section_post',
-            'settings' => 'poseidon_theme_options[postmeta_headline]',
+    $wp_customize->add_control( new Beetle_Customize_Header_Control(
+        $wp_customize, 'beetle_theme_options[postmeta_headline]', array(
+            'label' => esc_html__( 'Post Meta', 'beetle' ),
+            'section' => 'beetle_section_post',
+            'settings' => 'beetle_theme_options[postmeta_headline]',
             'priority' => 4
             )
         )
     );
 	
-	$wp_customize->add_setting( 'poseidon_theme_options[meta_date]', array(
+	$wp_customize->add_setting( 'beetle_theme_options[meta_date]', array(
         'default'           => true,
 		'type'           	=> 'option',
         'transport'         => 'refresh',
-        'sanitize_callback' => 'poseidon_sanitize_checkbox'
+        'sanitize_callback' => 'beetle_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'poseidon_theme_options[meta_date]', array(
-        'label'    => esc_html__( 'Display post date', 'poseidon' ),
-        'section'  => 'poseidon_section_post',
-        'settings' => 'poseidon_theme_options[meta_date]',
+    $wp_customize->add_control( 'beetle_theme_options[meta_date]', array(
+        'label'    => esc_html__( 'Display post date', 'beetle' ),
+        'section'  => 'beetle_section_post',
+        'settings' => 'beetle_theme_options[meta_date]',
         'type'     => 'checkbox',
 		'priority' => 5
 		)
 	);
 	
-	$wp_customize->add_setting( 'poseidon_theme_options[meta_author]', array(
+	$wp_customize->add_setting( 'beetle_theme_options[meta_author]', array(
         'default'           => true,
 		'type'           	=> 'option',
         'transport'         => 'refresh',
-        'sanitize_callback' => 'poseidon_sanitize_checkbox'
+        'sanitize_callback' => 'beetle_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'poseidon_theme_options[meta_author]', array(
-        'label'    => esc_html__( 'Display post author', 'poseidon' ),
-        'section'  => 'poseidon_section_post',
-        'settings' => 'poseidon_theme_options[meta_author]',
+    $wp_customize->add_control( 'beetle_theme_options[meta_author]', array(
+        'label'    => esc_html__( 'Display post author', 'beetle' ),
+        'section'  => 'beetle_section_post',
+        'settings' => 'beetle_theme_options[meta_author]',
         'type'     => 'checkbox',
 		'priority' => 6
 		)
 	);
 	
-	$wp_customize->add_setting( 'poseidon_theme_options[meta_category]', array(
+	$wp_customize->add_setting( 'beetle_theme_options[meta_category]', array(
         'default'           => true,
 		'type'           	=> 'option',
         'transport'         => 'refresh',
-        'sanitize_callback' => 'poseidon_sanitize_checkbox'
+        'sanitize_callback' => 'beetle_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'poseidon_theme_options[meta_category]', array(
-        'label'    => esc_html__( 'Display post categories', 'poseidon' ),
-        'section'  => 'poseidon_section_post',
-        'settings' => 'poseidon_theme_options[meta_category]',
+    $wp_customize->add_control( 'beetle_theme_options[meta_category]', array(
+        'label'    => esc_html__( 'Display post categories', 'beetle' ),
+        'section'  => 'beetle_section_post',
+        'settings' => 'beetle_theme_options[meta_category]',
         'type'     => 'checkbox',
 		'priority' => 7
 		)
 	);
 
-	$wp_customize->add_setting( 'poseidon_theme_options[meta_tags]', array(
+	$wp_customize->add_setting( 'beetle_theme_options[meta_tags]', array(
         'default'           => false,
 		'type'           	=> 'option',
         'transport'         => 'refresh',
-        'sanitize_callback' => 'poseidon_sanitize_checkbox'
+        'sanitize_callback' => 'beetle_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'poseidon_theme_options[meta_tags]', array(
-        'label'    => esc_html__( 'Display post tags on single posts', 'poseidon' ),
-        'section'  => 'poseidon_section_post',
-        'settings' => 'poseidon_theme_options[meta_tags]',
+    $wp_customize->add_control( 'beetle_theme_options[meta_tags]', array(
+        'label'    => esc_html__( 'Display post tags on single posts', 'beetle' ),
+        'section'  => 'beetle_section_post',
+        'settings' => 'beetle_theme_options[meta_tags]',
         'type'     => 'checkbox',
 		'priority' => 8
 		)
 	);
 	
 	// Add Post Footer Settings
-	$wp_customize->add_setting( 'poseidon_theme_options[post_footer_headline]', array(
+	$wp_customize->add_setting( 'beetle_theme_options[post_footer_headline]', array(
         'default'           => '',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'esc_attr'
         )
     );
-    $wp_customize->add_control( new Poseidon_Customize_Header_Control(
-        $wp_customize, 'poseidon_theme_options[post_footer_headline]', array(
-            'label' => esc_html__( 'Post Footer', 'poseidon' ),
-            'section' => 'poseidon_section_post',
-            'settings' => 'poseidon_theme_options[post_footer_headline]',
+    $wp_customize->add_control( new Beetle_Customize_Header_Control(
+        $wp_customize, 'beetle_theme_options[post_footer_headline]', array(
+            'label' => esc_html__( 'Post Footer', 'beetle' ),
+            'section' => 'beetle_section_post',
+            'settings' => 'beetle_theme_options[post_footer_headline]',
             'priority' => 9
             )
         )
     );
-	$wp_customize->add_setting( 'poseidon_theme_options[post_navigation]', array(
+	$wp_customize->add_setting( 'beetle_theme_options[post_navigation]', array(
         'default'           => true,
 		'type'           	=> 'option',
         'transport'         => 'refresh',
-        'sanitize_callback' => 'poseidon_sanitize_checkbox'
+        'sanitize_callback' => 'beetle_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'poseidon_theme_options[post_navigation]', array(
-        'label'    => esc_html__( 'Display post navigation on single posts', 'poseidon' ),
-        'section'  => 'poseidon_section_post',
-        'settings' => 'poseidon_theme_options[post_navigation]',
+    $wp_customize->add_control( 'beetle_theme_options[post_navigation]', array(
+        'label'    => esc_html__( 'Display post navigation on single posts', 'beetle' ),
+        'section'  => 'beetle_section_post',
+        'settings' => 'beetle_theme_options[post_navigation]',
         'type'     => 'checkbox',
 		'priority' => 10
 		)
 	);
 	
 }
-add_action( 'customize_register', 'poseidon_customize_register_post_settings' );
+add_action( 'customize_register', 'beetle_customize_register_post_settings' );

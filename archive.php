@@ -4,13 +4,13 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Poseidon
+ * @package Beetle
  */
  
 get_header(); 
 
 // Get Theme Options from Database
-$theme_options = poseidon_theme_options();
+$theme_options = beetle_theme_options();
 ?>
 	
 	<section id="primary" class="content-area">
@@ -32,7 +32,7 @@ $theme_options = poseidon_theme_options();
 			endwhile;
 			
 			// Display Pagination	
-			poseidon_pagination();
+			beetle_pagination();
 
 		endif; ?>
 			

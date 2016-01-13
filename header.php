@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Poseidon
+ * @package Beetle
  */
  
 ?><!DOCTYPE html>
@@ -23,9 +23,9 @@
 
 	<div id="page" class="hfeed site">
 		
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'poseidon' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'beetle' ); ?></a>
 		
-		<?php do_action( 'poseidon_header_bar' ); ?>
+		<?php do_action( 'beetle_header_bar' ); ?>
 		
 		<header id="masthead" class="site-header clearfix" role="banner">
 			
@@ -33,7 +33,7 @@
 						
 				<div id="logo" class="site-branding clearfix">
 				
-					<?php do_action( 'poseidon_site_title' ); ?>
+					<?php do_action( 'beetle_site_title' ); ?>
 				
 				</div><!-- .site-branding -->
 				
@@ -45,7 +45,7 @@
 							'container' => false, 
 							'menu_class' => 'main-navigation-menu', 
 							'echo' => true, 
-							'fallback_cb' => 'poseidon_default_menu')
+							'fallback_cb' => 'beetle_default_menu')
 						);
 					?>
 				</nav><!-- #main-navigation -->
@@ -54,10 +54,10 @@
 		
 		</header><!-- #masthead -->
 		
-		<?php poseidon_header_image(); ?>
+		<?php beetle_header_image(); ?>
 		
-		<?php poseidon_slider(); ?>
+		<?php beetle_slider(); ?>
 		
-		<?php poseidon_breadcrumbs(); ?>
+		<?php beetle_breadcrumbs(); ?>
 			
 		<div id="content" class="site-content container clearfix">

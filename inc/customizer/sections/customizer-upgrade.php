@@ -4,7 +4,7 @@
  *
  * Registers Upgrade Section for the Pro Version of the theme
  *
- * @package Poseidon
+ * @package Beetle
  */
 
 
@@ -13,32 +13,32 @@
  *
  * @param object $wp_customize / Customizer Object
  */
-function poseidon_customize_register_upgrade_settings( $wp_customize ) {
+function beetle_customize_register_upgrade_settings( $wp_customize ) {
 
 	// Add Upgrade / More Features Section
-	$wp_customize->add_section( 'poseidon_section_upgrade', array(
-        'title'    => esc_html__( 'More Features', 'poseidon' ),
+	$wp_customize->add_section( 'beetle_section_upgrade', array(
+        'title'    => esc_html__( 'More Features', 'beetle' ),
         'priority' => 70,
-		'panel' => 'poseidon_options_panel' 
+		'panel' => 'beetle_options_panel' 
 		)
 	);
 	
 	// Add custom Upgrade Content control
-	$wp_customize->add_setting( 'poseidon_theme_options[upgrade]', array(
+	$wp_customize->add_setting( 'beetle_theme_options[upgrade]', array(
         'default'           => '',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'esc_attr'
         )
     );
-    $wp_customize->add_control( new Poseidon_Customize_Upgrade_Control(
-        $wp_customize, 'poseidon_theme_options[upgrade]', array(
-            'section' => 'poseidon_section_upgrade',
-            'settings' => 'poseidon_theme_options[upgrade]',
+    $wp_customize->add_control( new Beetle_Customize_Upgrade_Control(
+        $wp_customize, 'beetle_theme_options[upgrade]', array(
+            'section' => 'beetle_section_upgrade',
+            'settings' => 'beetle_theme_options[upgrade]',
             'priority' => 1
             )
         )
     );
 
 }
-add_action( 'customize_register', 'poseidon_customize_register_upgrade_settings' );
+add_action( 'customize_register', 'beetle_customize_register_upgrade_settings' );

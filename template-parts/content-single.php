@@ -2,19 +2,19 @@
 /**
  * The template for displaying single posts
  *
- * @package Poseidon
+ * @package Beetle
  */
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		
-		<?php poseidon_post_image_single(); ?>
+		<?php beetle_post_image_single(); ?>
 		
 		<header class="entry-header">
 			
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			
-			<?php poseidon_entry_meta(); ?>
+			<?php beetle_entry_meta(); ?>
 
 		</header><!-- .entry-header -->
 
@@ -26,8 +26,8 @@
 		
 		<footer class="entry-footer">
 			
-			<?php poseidon_entry_tags(); ?>
-			<?php poseidon_post_navigation(); ?>
+			<?php beetle_entry_tags(); ?>
+			<?php beetle_post_navigation(); ?>
 			
 		</footer><!-- .entry-footer -->
 
