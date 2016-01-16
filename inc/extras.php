@@ -35,11 +35,6 @@ function beetle_body_classes( $classes ) {
 		$classes[] = 'sidebar-left';
 	}
 	
-	// Add Sticky Header class
-	if ( true == $theme_options['sticky_header'] ) {
-		$classes[] = 'sticky-header';
-	}
-	
 	// Add Small Post Layout class
 	if ( ( is_archive() or is_home() ) and 'left' == $theme_options['post_layout_archives'] ) {
 		$classes[] = 'post-layout-small';

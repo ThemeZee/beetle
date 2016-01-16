@@ -89,25 +89,50 @@ F) Licenses of bundled resources
 	Copyright: 2015 WooThemes, http://www.woothemes.com
 	
 	5. Arimo Font - https://www.google.com/fonts/specimen/Arimo
-	License: Distributed under the terms of the Arimo Font License (http://font.ubuntu.com/ufl/)
-	Copyright: 2015 Dalton Maag
+	License: Distributed under the terms of the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
+	Copyright: 2013 Steve Matteson
 	
-	6. Open Sans Font - https://www.google.com/fonts/specimen/Open Sans
-	License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-	Copyright: 2015 Matt McInerney, Pablo Impallari
+	6. Open Sans Font - https://www.google.com/fonts/specimen/Open+Sans
+	License: Distributed under the terms of the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
+	Copyright: 2014 Steve Matteson
 	
-	7. Images from Pixabay - http://pixabay.com
+	7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
+	
+	Image 1: https://pixabay.com/en/ladybug-beetle-insect-lucky-charm-1036453/
 	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2015 Pixabay users: werner22brigitte, sciencefreak, geralt
+	Copyright: 2015 Anja Osenberg (https://pixabay.com/en/users/cocoparisienne-127419/)
 	
-	Images used in screenshot.jpg:
-	Image 1: https://pixabay.com/en/fantasy-magic-mystic-fantastic-466759/
-	Image 2: https://pixabay.com/en/butterfly-stopwatch-eye-face-744115/
-	Image 3: https://pixabay.com/en/mysticism-beyond-bridge-death-666965/
-	Image 4: https://pixabay.com/en/statue-planet-sky-space-universe-717492/
-	Image 5: https://pixabay.com/en/orbit-space-science-fiction-767375/
-	Image 6: https://pixabay.com/en/baby-nest-stork-feather-bird-bill-707906/
-	Image 7: https://pixabay.com/en/butterfly-bokeh-magic-dream-dreams-407746/
+	Image 2: https://pixabay.com/en/still-life-teddy-white-read-book-1037378/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2015 Christiane (https://pixabay.com/en/users/Oldiefan-740865/)
+	
+	Image 3: https://pixabay.com/en/popcorn-movie-party-entertainment-1085072/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2015 Deborah Breen Whiting (https://pixabay.com/en/users/dbreen-1643989/)
+	
+	Image 4: https://pixabay.com/en/beetles-harmonia-axyridis-ladybug-994211/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2015 FRANCO PATRIZIA (https://pixabay.com/en/users/francok35-631285/)
+	
+	Image 5: https://pixabay.com/en/paris-architecture-france-674964/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2015 Gerhard Boegner (https://pixabay.com/en/users/bogitw-851103/)
+	
+	Image 6: https://pixabay.com/en/vegetables-garden-harvest-organic-790022/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2015 Jill Wellington (https://pixabay.com/en/users/jill111-334088/)
+	
+	Image 7: https://pixabay.com/en/valentine-candy-hearts-conversation-626447/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2015 Jill Wellington (https://pixabay.com/en/users/jill111-334088/)
+	
+	Image 8: https://pixabay.com/en/louvre-pyramid-paris-architecture-102840/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2015 Edi Nugraha (https://pixabay.com/en/users/EdiNugraha-30562/)
+	
+	Image 9: https://pixabay.com/en/clock-time-hour-minutes-watches-782536/
+	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+	Copyright: 2015 claudio losa (https://pixabay.com/en/users/closa-726076/)
 
 ===================================
 Enjoy!

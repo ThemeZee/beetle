@@ -43,7 +43,6 @@ function beetle_default_options() {
 		'custom_header_link'				=> '',
 		'custom_header_hide'				=> false,
 		'layout' 							=> 'right-sidebar',
-		'sticky_header'						=> false,
 		'post_layout_archives'				=> 'left',
 		'post_layout_single' 				=> 'header',
 		'latest_posts_title'				=> esc_html__( 'Latest Posts', 'beetle' ),

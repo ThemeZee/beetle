@@ -2,10 +2,6 @@
 Beetle Changelog
 ===================================
 
-Version 1.0.1
------------------------------------
-[added] Magazine Homepage page template
-
 Version 1.0
 -----------------------------------
 Final Version

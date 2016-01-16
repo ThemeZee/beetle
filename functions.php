@@ -95,6 +95,16 @@ function beetle_widgets_init() {
 	));
 	
 	register_sidebar( array(
+		'name' => esc_html__( 'Header', 'beetle' ),
+		'id' => 'header',
+		'description' => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'beetle' ),
+		'before_widget' => '<aside id="%1$s" class="header-widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h4 class="header-widget-title">',
+		'after_title' => '</h4>',
+	));
+	
+	register_sidebar( array(
 		'name' => esc_html__( 'Magazine Homepage', 'beetle' ),
 		'id' => 'magazine-homepage',
 		'description' => esc_html__( 'Appears on Magazine Homepage template only. You can use the Magazine Posts widgets here.', 'beetle' ),
@@ -145,7 +155,7 @@ add_action( 'wp_enqueue_scripts', 'beetle_scripts' );
 function beetle_google_fonts_url() {
     
 	// Set default Fonts
-	$font_families = array('Arimo:200,400,600,800', 'Open Sans:100,200,300,400,500,600,700,800');
+	$font_families = array('Arimo:400,400italic,700,700italic', 'Open Sans:400,400italic,600,700,700italic');
 
 	// Build Fonts URL
 	$query_args = array(
@@ -167,9 +177,9 @@ function beetle_add_image_sizes() {
 	add_image_size( 'beetle-header-image', 1230, 410, true );
 	
 	// Add different thumbnail sizes for widgets and post layouts
-	add_image_size( 'beetle-thumbnail-small', 120, 80, true );
-	add_image_size( 'beetle-thumbnail-medium', 360, 240, true );
-	add_image_size( 'beetle-thumbnail-large', 600, 400, true );
+	add_image_size( 'beetle-thumbnail-small', 120, 70, true );
+	add_image_size( 'beetle-thumbnail-medium', 360, 180, true );
+	add_image_size( 'beetle-thumbnail-large', 600, 300, true );
 	
 }
 add_action( 'after_setup_theme', 'beetle_add_image_sizes' );
