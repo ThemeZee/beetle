@@ -1,8 +1,8 @@
 /*
 Theme Name: Beetle
-Theme URI: http://themezee.com/themes/beetle/
+Theme URI: https://themezee.com/themes/beetle/
 Author: ThemeZee
-Author URI: http://themezee.com
+Author URI: https://themezee.com
 Description: Beetle is a fast & elegant Lifestyle Magazine WordPress theme. It comes with a clean typography, subtle colors and works great with strong pictures. Beetle makes use of the Customizer and a few widget areas which allow you to easily set up your online magazine in just a few minutes.
 Version: 1.0
 License: GNU General Public License v2 or later
@@ -351,7 +351,6 @@ acronym {
 
 mark,
 ins {
-	background: #fff9c0;
 	text-decoration: none;
 }
 
@@ -1493,6 +1492,29 @@ textarea {
 .post-pagination a:hover,
 .post-pagination .current {
 	color: #353535;
+}
+
+/* Infinite Scroll Pagination */
+.infinite-scroll .post-pagination {
+	display: none;
+}
+
+.infinite-scroll #infinite-handle span {
+	display: inline-block;
+	margin: 0 0 3em;
+	padding: 0.35em 0.8em;
+	font-family: 'Open Sans', Tahoma, Arial;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: #fff;
+	background: #cc1199;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.infinite-scroll #infinite-handle span:hover {
+	background-color: #353535;
 }
 
 /* Archives and Search Heading */
