@@ -362,7 +362,7 @@ function beetle_footer_text() { ?>
 	<span class="credit-link">
 		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'beetle' ), 
 			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
-			'<a href="http://themezee.com/themes/beetle/" title="Beetle WordPress Theme">Beetle</a>'
+			'<a href="https://themezee.com/themes/beetle/" title="Beetle WordPress Theme">Beetle</a>'
 		); ?>
 	</span>
 

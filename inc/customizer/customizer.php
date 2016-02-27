@@ -100,9 +100,9 @@ function beetle_customize_controls_js() {
 	// Localize the script
 	wp_localize_script( 'beetle-customizer-controls', 'beetle_theme_links', array(
 		'title'	=> esc_html__( 'Theme Links', 'beetle' ),
-		'themeURL'	=> esc_url( beetle_theme_links( 'theme_page' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=beetle&utm_content=theme-page' ),
+		'themeURL'	=> esc_url( __( 'https://themezee.com/themes/beetle/', 'beetle' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=beetle&utm_content=theme-page' ),
 		'themeLabel'	=> esc_html__( 'Theme Page', 'beetle' ),
-		'docuURL'	=> esc_url( beetle_theme_links( 'documentation' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=beetle&utm_content=documentation' ),
+		'docuURL'	=> esc_url( __( 'https://themezee.com/docs/beetle-documentation/', 'beetle' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=beetle&utm_content=documentation' ),
 		'docuLabel'	=>  esc_html__( 'Theme Documentation', 'beetle' ),
 		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/beetle?filter=5' ),
 		'rateLabel'	=> esc_html__( 'Rate this theme', 'beetle' ),

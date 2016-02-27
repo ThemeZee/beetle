@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Beetle\n"
-"Report-Msgid-Bugs-To: http://themezee.com/\n"
+"Report-Msgid-Bugs-To: https://themezee.com/\n"
 "POT-Creation-Date: 2016-01-16 18:29+0100\n"
 "PO-Revision-Date: 2016-01-16 18:29+0100\n"
 "Last-Translator: \n"

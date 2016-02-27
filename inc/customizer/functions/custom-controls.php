@@ -94,11 +94,11 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				<span class="customize-control-title"><?php esc_html_e( 'Pro Version', 'beetle' ); ?></span>
 				
 				<span class="textfield">
-					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'beetle' ), 'Beetle'); ?>
+					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'beetle' ), 'Anderson'); ?>
 				</span>
 				
 				<p>
-					<a href="<?php echo esc_url( beetle_theme_links( 'pro_version' ) . '?utm_source=customizer&utm_medium=button&utm_campaign=beetle&utm_content=pro-version' ); ?>" target="_blank" class="button button-secondary">
+					<a href="<?php echo esc_url( __( 'https://themezee.com/addons/beetle-pro/', 'beetle' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=beetle&utm_content=pro-version" target="_blank" class="button button-secondary">
 						<?php printf( esc_html__( 'Learn more about %s Pro', 'beetle' ), 'Beetle'); ?>
 					</a>
 				</p>
@@ -114,7 +114,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</span>
 				
 				<p>
-					<a href="<?php echo esc_url( beetle_theme_links( 'plugins' ) . '?utm_source=customizer&utm_medium=button&utm_campaign=beetle&utm_content=plugins' ); ?>" target="_blank" class="button button-secondary">
+					<a href="<?php echo esc_url( __( 'https://themezee.com/plugins/', 'beetle' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=beetle&utm_content=plugins" target="_blank" class="button button-secondary">
 						<?php esc_html_e( 'Browse Plugins', 'beetle' ); ?>
 					</a>
 					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
