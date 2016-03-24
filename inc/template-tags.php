@@ -38,13 +38,6 @@ function beetle_header_image() {
 			<?php the_post_thumbnail( 'beetle-header-image' ); ?>
 		</div>
 	
-	<?php // Display Header Image on Single Posts
-	elseif( is_single() && has_post_thumbnail() && 'header' == $theme_options['post_layout_single'] ) : ?>
-		
-		<div id="headimg" class="header-image featured-image-header">
-			<?php the_post_thumbnail( 'beetle-header-image' ); ?>
-		</div>
-	
 	<?php // Display default header image set on Appearance > Header
 	elseif( get_header_image() ) : 
 
@@ -123,7 +116,7 @@ function beetle_post_image_single() {
 	$theme_options = beetle_theme_options();
 	
 	// Display Post Thumbnail if activated
-	if ( 'top' == $theme_options['post_layout_single'] ) :
+	if ( true == $theme_options['post_image_single'] ) :
 
 		the_post_thumbnail();
 

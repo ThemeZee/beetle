@@ -64,10 +64,10 @@ add_action( 'after_setup_theme', 'beetle_theme_addons_image_sizes' );
 function beetle_theme_addons_image_sizes() {
 
 	// Add Widget Bundle Thumbnail
-	add_image_size( 'tzwb-thumbnail', 80, 60, true );
+	add_image_size( 'tzwb-thumbnail', 100, 80, true );
 	
 	// Add Related Posts Thumbnail
-	add_image_size( 'themezee-related-posts', 450, 250, true );
+	add_image_size( 'themezee-related-posts', 400, 320, true );
 
 }
 

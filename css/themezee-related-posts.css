@@ -117,18 +117,18 @@ ul.related-posts-list {
 }
 
 .related-posts-two-columns .related-post-column .entry-title {
-	font-size: 24px;
-	font-size: 1.5rem;
-}
-	
-.related-posts-three-columns .related-post-column .entry-title {
 	font-size: 20px;
 	font-size: 1.25rem;
 }
+	
+.related-posts-three-columns .related-post-column .entry-title {
+	font-size: 16px;
+	font-size: 1rem;
+}
 
 .related-posts-four-columns .related-post-column .entry-title {
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 15px;
+	font-size: 0.9375rem;
 }
 
 .related-posts-four-columns .related-post-column .entry-meta .meta-date,

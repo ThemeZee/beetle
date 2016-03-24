@@ -150,35 +150,31 @@
 
 .tzwb-tabbed-content .tzwb-tabnavi li a {
 	display: block;
-	margin: 0 2px 2px 0;
-	padding: 0.5em 0.8em;
+	margin: 0 0.3em 0.3em 0;
+	padding: 0.3em 0.8em;
 	font-family: 'Open Sans', Tahoma, Arial;
-	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-weight: bold;
 	color: #fff;
-	background: #444;
+	background: #353535;
 	text-transform: uppercase;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link, 
 .tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
 	color: #fff;
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	-ms-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	transition: all 0.4s ease;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover, 
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
-	background: #cc1199;
+	background: #cc77bb;
 	text-decoration: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
 	color: #fff;
-	background: #cc1199;
+	background: #cc77bb;
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -313,7 +309,7 @@
 	padding: 0.3em 0.6em;
 	text-decoration: none;
 	font-size: 1.0em !important;
-	border: 1px solid #cc1199;
+	border: 1px solid #cc77bb;
 }
 
 .tzwb-tabcontent-tagcloud a:link, 
@@ -328,7 +324,7 @@
 .tzwb-tabcontent-tagcloud a:hover, 
 .tzwb-tabcontent-tagcloud a:active {
 	color: #fff;
-	background-color: #cc1199;
+	background-color: #cc77bb;
 }
 
 /*--------------------------------------------------------------
@@ -345,7 +341,7 @@
 
 .tzwb-social-icons .social-icons-menu li a {
 	padding: 0.6em;
-	background: #cc1199;
+	background: #cc77bb;
 }
 
 .tzwb-social-icons .social-icons-menu li a:before {

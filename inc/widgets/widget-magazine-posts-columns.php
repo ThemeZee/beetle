@@ -283,7 +283,7 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 		if( !empty( $widget_title ) ) :
 
 			// Link Category Title
-			if( true == $settings['category_link'] and $category_id > 0 ) : 
+			if( $category_id > 0 ) : 
 			
 				// Set Link URL and Title for Category
 				$link_title = sprintf( esc_html__( 'View all posts from category %s', 'beetle' ), get_cat_name( $category_id ) );

@@ -288,10 +288,10 @@ input,
 select,
 textarea {
 	color: #353535;
-	font-family: 'Arimo', Tahoma, Arial;
+	font-family: 'Open Sans', Tahoma, Arial;
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: 1.75;
 }
 
 h1,
@@ -432,13 +432,13 @@ table {
 }
 
 a {
-	color: #cc1199;
+	color: #cc77bb;
 	text-decoration: none;
 }
 
 a:link,
 a:visited {
-	color: #cc1199;
+	color: #cc77bb;
 }
 
 a:hover,
@@ -463,13 +463,13 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	padding: 0.4em 0.8em;
+	padding: 0.3em 0.8em;
 	font-family: 'Open Sans', Tahoma, Arial;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-weight: bold;
 	color: #fff;
-	background: #cc1199;
+	background: #cc77bb;
 	border: none;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -479,7 +479,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: #444;
+	background: #353535;
 }
 
 button:focus,
@@ -592,26 +592,26 @@ textarea {
 # 8.0 - Layout Structure
 --------------------------------------------------------------*/
 .site {
+	max-width: 1140px;
 	width: 100%;
-	margin: 0;
+	margin: 0 auto;
+	background: #fff;
+	box-shadow: 0 0 2px #ccc;
 }
 
 .container {
-	max-width: 1310px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0 3em;
+	padding: 0 2em;
 }
 
 .site-content {
-	padding-top: 3em;
+	padding-top: 2em;
 	background: #fff;
 }
 
 .content-area {
 	float: left;
-	width: 73%;
-	padding-right: 4em;
+	width: 72%;
+	padding-right: 2em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -619,7 +619,7 @@ textarea {
 
 .sidebar {
 	float: right;
-	width: 27%;
+	width: 28%;
 }
 
 /* Fullwidth Template */
@@ -634,8 +634,8 @@ textarea {
 --------------------------------------------------------------*/
 .header-main {
 	background: #fff;
-	padding-top: 2.5em;
-	padding-bottom: 2.5em;
+	padding-top: 2em;
+	padding-bottom: 2em;
 }
 
 .site-branding {
@@ -655,7 +655,7 @@ textarea {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	color: #353535;
+	color: #cc77bb;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 36px;
 	font-size: 2.25rem;
@@ -668,7 +668,7 @@ textarea {
 }
 
 .site-branding a:hover .site-title {
-	color: #cc1199;
+	color: #353535;
 }
 
 /* Header Widgets */
@@ -692,7 +692,7 @@ textarea {
 
 /* Custom Header Image */
 .header-image {
-	margin: -1em 0 3em;
+	margin: 0 0 2em;
 	text-align: center;
 }
 
@@ -740,10 +740,10 @@ textarea {
 .main-navigation-menu a {
 	display: block;
 	font-family: 'Open Sans', Tahoma, Arial;
-	font-size: 15px;
-	font-size: 0.9375rem;
-	font-weight: 600;
-	padding: 1em 1.5em;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	padding: 0.75em 1.5em;
 	text-transform: uppercase;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
@@ -774,7 +774,7 @@ textarea {
 }
 
 .main-navigation-menu a:hover {
-	background: rgba(255,255,255,0.1);
+	background: rgba(0,0,0,0.25);
 }
 
 .main-navigation-menu ul {
@@ -785,7 +785,7 @@ textarea {
 	padding: 0;
 	list-style-type: none;
 	list-style-position: outside;
-	background: #333;
+	background: #cc77bb;
 }
 
 .main-navigation-menu ul li{
@@ -795,7 +795,7 @@ textarea {
 .main-navigation-menu ul a {
 	width: 250px;
 	width: 16rem;
-	padding: 1em;
+	padding: 0.75em 1em;
 	float: left;
 	font-size: 13px;
 	font-size: 0.8125rem;
@@ -848,7 +848,7 @@ textarea {
 }
 
 .main-navigation-menu li.current-menu-item > a {
-	background: rgba(255,255,255,0.1);
+	background: #cc77bb;
 }
 
 /*--------------------------------------------------------------
@@ -933,7 +933,7 @@ textarea {
 # 11.0 - Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 3em 0;
+	margin: 0 0 2em 0;
 	color: #333;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
@@ -941,17 +941,16 @@ textarea {
 
 .widget-header {
 	margin: 0 0 1.5em 0;
-	border-bottom: 3px solid #353535;
+	border-bottom: 4px solid #353535;
 }
 
 .widget-title {
 	display: inline-block;
 	margin: 0;
-	padding: 0 0 0.3em;
+	padding: 0 0 0.5em;
 	font-family: 'Open Sans', Tahoma, Arial;
-	font-size: 16px;
-	font-size: 1rem;
-	font-weight: 600;
+	font-size: 14px;
+	font-size: 0.875rem;
 	text-transform: uppercase;
 	color: #353535;
 }
@@ -980,7 +979,7 @@ textarea {
 
 .widget-title a:hover, 
 .widget-title a:active  {
-	color: #cc1199;
+	color: #cc77bb;
 }
 
 /* Make sure select elements fit in widgets. */
@@ -991,44 +990,6 @@ textarea {
 /*--------------------------------------------------------------
 ## 11.1 - Default Widgets
 --------------------------------------------------------------*/
-
-/* Tagcloud Widget */
-.widget_tag_cloud .tagcloud {
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-.widget_tag_cloud .tagcloud:before,
-.widget_tag_cloud .tagcloud:after {
-	content: "";
-	display: table;
-}
-
-.widget_tag_cloud .tagcloud:after {
-	clear: both;
-}
-
-.widget_tag_cloud .tagcloud a {
-	float: left;
-	display: inline-block;
-	margin: 0 2px 2px 0;
-	padding: 0.2em 0.5em 0.3em;
-	text-decoration: none;
-	background: #cc1199;
-	font-size: 16px !important;
-	font-size: 1rem !important;
-}
-
-.widget_tag_cloud .tagcloud a:link, 
-.widget_tag_cloud .tagcloud a:visited {
-	color: #fff;
-}
-
-.widget_tag_cloud .tagcloud a:hover, 
-.widget_tag_cloud .tagcloud a:active {
-	color: #fff;
-	background: #353535;
-}
 
 /* Theme Search Widget */
 .search-form {
@@ -1062,7 +1023,7 @@ textarea {
 	font-size: 16px;
 	font-size: 1rem;
 	border: none;
-	background: #cc1199;
+	background: #cc77bb;
 	padding: 0.6em;
 	cursor: pointer;
 }
@@ -1272,17 +1233,22 @@ textarea {
 .type-post, 
 .type-page, 
 .type-attachment  {
-	margin: 0 0 3em 0;
+	margin: 0 0 1.5em;
 	max-width: 100%;
 }
+
+.archive .type-post,
+.home .type-post {
+	padding: 0 0 1.5em;
+	border-bottom: 1px solid #ddd;
+} 
 
 .page-title, 
 .entry-title {
 	display: inline;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 36px;
-	font-size: 2.25rem;
-	font-weight: 600;
+	font-size: 24px;
+	font-size: 1.5rem;
 	padding: 0;
 	margin: 0;
 	color: #353535;
@@ -1303,16 +1269,11 @@ textarea {
 
 .entry-title a:hover, 
 .entry-title a:active{
-	color: #cc1199;
+	color: #cc77bb;
 }
 
 .type-post .wp-post-image {
-	margin: 0 0 0.5em;
-}
-
-.entry-content {
-	font-size: 17px;
-	font-size: 1.0625rem;
+	margin: 1em 0 0;
 }
 
 .sticky {}
@@ -1323,11 +1284,11 @@ textarea {
 	margin: 0;
 	padding: 0.3em 0.8em;
 	font-family: 'Open Sans', Tahoma, Arial;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 600;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-weight: bold;
 	color: #fff;
-	background: #cc1199;
+	background: #cc77bb;
 	text-transform: uppercase;
 	text-decoration: none;
 }
@@ -1345,19 +1306,19 @@ textarea {
 /* Small Post Layout */
 .post-layout-small .type-post .wp-post-image {
 	float: left;
-	max-width: 40%;
-	margin: 0 1.5em 1.5em 0;
-	padding: 0.3em 0 0;
+	max-width: 32%;
+	margin: 0 1.5em 0 0;
+	padding: 0.3em 0;
 }
 
 .post-layout-small .type-post .entry-title {
-	font-size: 28px;
-	font-size: 1.75rem;
+	font-size: 20px;
+	font-size: 1.25rem;
 }
 
 .post-layout-small .type-post .entry-content {
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 15px;
+	font-size: 0.9375rem;
 }
 
 .post-layout-small .type-post .entry-excerpt p {
@@ -1373,10 +1334,10 @@ textarea {
 
 /* Entry Meta */
 .entry-meta {
-	margin: 0.5em 0.2em 0;
+	margin: 0;
 	color: #999;
-	font-size: 13px;
-	font-size: 0.8125rem;
+	font-size: 14px;
+	font-size: 0.875rem;
 }
 
 .entry-meta a:link, 
@@ -1400,45 +1361,68 @@ textarea {
 	display: none;
 }
 
-/* Entry Tags */
+/* Entry Tags & Tagcloud Widget */
 .entry-tags {
 	clear: both;
-	margin: 0 0 2em;
+	margin: 0 0 1.5em;
 }
 
+.widget_tag_cloud .tagcloud,
 .entry-tags .meta-tags {
-	display: block;
-	margin: 0;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
 
+.widget_tag_cloud .tagcloud:before,
+.widget_tag_cloud .tagcloud:after,
+.entry-tags .meta-tags:before,
+.entry-tags .meta-tags:after {
+	content: "";
+	display: table;
+}
+
+.widget_tag_cloud .tagcloud:after,
+.entry-tags .meta-tags:after {
+	clear: both;
+}
+
+.widget_tag_cloud .tagcloud a,
 .entry-tags .meta-tags a {
 	float: left;
 	display: inline-block;
-	margin: 0 2px 2px 0;
-	padding: 0.2em 0.5em 0.3em;
+	margin: 0 0.3em 0.3em 0;
+	padding: 0.15em 0.6em;
 	text-decoration: none;
-	background: #cc1199;
+	color: #fff;
+	background: #cc77bb;
+	font-size: 12px !important;
+	font-size: 0.75rem !important;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
+.widget_tag_cloud .tagcloud a:link, 
+.widget_tag_cloud .tagcloud a:visited,
 .entry-tags .meta-tags a:link, 
 .entry-tags .meta-tags a:visited {
 	color: #fff;
 }
 
+.widget_tag_cloud .tagcloud a:hover, 
+.widget_tag_cloud .tagcloud a:active,
 .entry-tags .meta-tags a:hover, 
 .entry-tags .meta-tags a:active {
-	color: #fff;
 	background: #353535;
 }
 
 /* Post Navigation */
 .post-navigation {
 	margin: 1em 0 0;
-	padding: 0.6em 0;
+	padding: 0.5em 0;
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
+	font-size: 15px;
+	font-size: 0.9375rem;
 }
 
 .post-navigation .nav-links:before,
@@ -1463,7 +1447,7 @@ textarea {
 .post-pagination {
 	display: block;
 	border-top: 2px solid #353535;
-	margin: 0 0 3em;
+	margin: 0 0 2em;
 }
 .post-pagination a,
 .post-pagination .current {
@@ -1473,10 +1457,10 @@ textarea {
     text-align: center;
 	text-decoration: none;
 	font-family: 'Open Sans', Tahoma, Arial;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 13px;
+	font-size: 0.8125rem;
 	font-weight: bold;
-	color: #cc1199;
+	color: #cc77bb;
 	text-transform: uppercase;
 }
 
@@ -1501,14 +1485,14 @@ textarea {
 
 .infinite-scroll #infinite-handle span {
 	display: inline-block;
-	margin: 0 0 3em;
-	padding: 0.35em 0.8em;
+	margin: 0 0 2em;
+	padding: 0.3em 0.8em;
 	font-family: 'Open Sans', Tahoma, Arial;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 600;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-weight: bold;
 	color: #fff;
-	background: #cc1199;
+	background: #cc77bb;
 	text-transform: uppercase;
 	text-decoration: none;
 }
@@ -1520,17 +1504,16 @@ textarea {
 /* Archives and Search Heading */
 .page-header {
 	margin: 0 0 1.5em 0;
-	border-bottom: 3px solid #353535;
+	border-bottom: 4px solid #353535;
 }
 
 .page-header .archive-title {
 	display: inline-block;
 	margin: 0;
-	padding: 0 0 0.3em;
+	padding: 0 0 0.5em;
 	font-family: 'Open Sans', Tahoma, Arial;
-	font-size: 16px;
-	font-size: 1rem;
-	font-weight: 600;
+	font-size: 14px;
+	font-size: 0.875rem;
 	text-transform: uppercase;
 	color: #353535;
 }
@@ -1596,18 +1579,17 @@ textarea {
 .comments-header,
 .comment-reply-title {
 	margin: 0 0 1.5em 0;
-	border-bottom: 3px solid #353535;
+	border-bottom: 4px solid #353535;
 }
 
 .comments-header .comments-title,
 .comment-reply-title span {
 	display: inline-block;
 	margin: 0;
-	padding: 0 0 0.3em;
+	padding: 0 0 0.5em;
 	font-family: 'Open Sans', Tahoma, Arial;
-	font-size: 16px;
-	font-size: 1rem;
-	font-weight: 600;
+	font-size: 14px;
+	font-size: 0.875rem;
 	text-transform: uppercase;
 	color: #353535;
 }
@@ -1710,10 +1692,6 @@ textarea {
 	margin-top: 0.4em;
 }
 
-.comment-form .submit {
-	padding: 1em 1.6em;
-}
-
 .comment-reply-title small a {
 	margin-left: 1em;
 	text-decoration: underline;
@@ -1726,7 +1704,7 @@ textarea {
 # 12.0 - Footer
 --------------------------------------------------------------*/
 .footer-wrap {
-	padding-bottom: 3em;
+	padding-bottom: 2em;
 	background: #fff;
 }
 
@@ -1803,9 +1781,14 @@ object {
 
 .gallery-item {
 	display: inline-block;
+	margin: 0;
+	padding: 1em 1.5em 0 0;
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .gallery-columns-2 .gallery-item {
@@ -1842,6 +1825,8 @@ object {
 
 .gallery-caption {
 	display: block;
+	font-size: 13px;
+	font-size: 0.8125rem;
 }
 
 /*--------------------------------------------------------------
@@ -1853,27 +1838,7 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 80em) {
 
-	.container {
-		padding: 0 2em;
-	}
 
-	.site-content {
-		padding-top: 2em;
-	}
-	
-	.content-area {
-		padding-right: 3em;
-	}
-	
-	.header-main {
-		padding-top: 2em;
-		padding-bottom: 2em;
-	}
-	
-	.header-image {
-		margin: 0 0 2em;
-		text-align: center;
-	}
 	
 }
 
