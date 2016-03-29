@@ -6,9 +6,11 @@
  */
 ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'small-archive-post clearfix' ); ?>>
 		
-		<?php beetle_post_image_archives(); ?>
+		<a href="<?php esc_url( the_permalink() ); ?>" rel="bookmark">
+			<?php the_post_thumbnail( 'beetle-thumbnail-archive' ); ?>
+		</a>
 		
 		<header class="entry-header">
 
@@ -18,9 +20,10 @@
 		
 		</header><!-- .entry-header -->
 
-		<div class="entry-content entry-excerpt clearfix">
-			<?php the_excerpt(); ?>
-			<?php beetle_more_link(); ?>
+		<div class="entry-content clearfix">
+			
+			<?php beetle_post_content(); ?>
+		
 		</div><!-- .entry-content -->
 
 	</article>

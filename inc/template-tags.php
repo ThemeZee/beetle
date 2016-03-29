@@ -70,39 +70,28 @@ function beetle_header_image() {
 endif;
 
 
-if ( ! function_exists( 'beetle_post_image_archives' ) ):
+if ( ! function_exists( 'beetle_post_content' ) ):
 /**
- * Displays the featured image on archive pages
+ * Displays the post content on archive pages
  */
-function beetle_post_image_archives() {
+function beetle_post_content() {
 	
 	// Get Theme Options from Database
 	$theme_options = beetle_theme_options();
 	
 	// Return early if no featured image should be displayed
-	if ( 'none' == $theme_options['post_layout_archives'] ) :
-		return;
-	endif;
+	if ( 'excerpt' == $theme_options['post_content'] ) {
+		
+		the_excerpt();
+		beetle_more_link();
 	
-	// Display Featured Image beside post content
-	if ( 'left' == $theme_options['post_layout_archives'] ) : ?>
+	} else {
+		
+		the_content( esc_html__( 'Read more', 'beetle' ) );
+		
+	}
 
-		<a class="post-thumbnail-small" href="<?php esc_url( the_permalink() ); ?>" rel="bookmark">
-			<?php the_post_thumbnail( 'beetle-thumbnail-medium' ); ?>
-		</a>
-
-<?php
-	// Display Featured Image above post content
-	else: ?>
-
-		<a href="<?php esc_url( the_permalink() ); ?>" rel="bookmark">
-			<?php the_post_thumbnail(); ?>
-		</a>
-
-<?php
-	endif;
-
-} // beetle_post_image_archives()
+} // beetle_post_content()
 endif;
 
 
@@ -116,7 +105,7 @@ function beetle_post_image_single() {
 	$theme_options = beetle_theme_options();
 	
 	// Display Post Thumbnail if activated
-	if ( true == $theme_options['post_image_single'] ) :
+	if ( true == $theme_options['post_image'] ) :
 
 		the_post_thumbnail();
 

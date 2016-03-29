@@ -23,23 +23,27 @@ function beetle_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	
-	// Add Title for latest posts setting
-	$wp_customize->add_setting( 'beetle_theme_options[latest_posts_title]', array(
-        'default'           => esc_html__( 'Latest Posts', 'beetle' ),
+	// Add Post Layout Settings for archive posts
+	$wp_customize->add_setting( 'beetle_theme_options[post_layout]', array(
+        'default'           => 'small-image',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
-        'sanitize_callback' => 'esc_html'
+        'sanitize_callback' => 'beetle_sanitize_select'
 		)
 	);
-    $wp_customize->add_control( 'beetle_theme_options[latest_posts_title]', array(
-        'label'    => esc_html__( 'Title above Latest Posts', 'beetle' ),
+    $wp_customize->add_control( 'beetle_theme_options[post_layout]', array(
+        'label'    => esc_html__( 'Post Layout (archive pages)', 'beetle' ),
         'section'  => 'beetle_section_post',
-        'settings' => 'beetle_theme_options[latest_posts_title]',
-        'type'     => 'text',
-		'priority' => 1
+        'settings' => 'beetle_theme_options[post_layout]',
+        'type'     => 'select',
+		'priority' => 1,
+        'choices'  => array(
+            'small-image' => esc_html__( 'Show featured image beside content', 'beetle' ),
+            'index' => esc_html__( 'Show featured image below title', 'beetle' )
+			)
 		)
 	);
-
+	
 	// Add Settings and Controls for post content
 	$wp_customize->add_setting( 'beetle_theme_options[post_content]', array(
         'default'           => 'excerpt',
@@ -49,13 +53,13 @@ function beetle_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'beetle_theme_options[post_content]', array(
-        'label'    => esc_html__( 'Post length on archives', 'beetle' ),
+        'label'    => esc_html__( 'Post Length (archive pages)', 'beetle' ),
         'section'  => 'beetle_section_post',
         'settings' => 'beetle_theme_options[post_content]',
         'type'     => 'radio',
 		'priority' => 2,
         'choices'  => array(
-            'index' => esc_html__( 'Show full posts', 'beetle' ),
+            'full' => esc_html__( 'Show full posts', 'beetle' ),
             'excerpt' => esc_html__( 'Show post excerpts', 'beetle' )
 			)
 		)
@@ -63,7 +67,7 @@ function beetle_customize_register_post_settings( $wp_customize ) {
 	
 	// Add Setting and Control for Excerpt Length
 	$wp_customize->add_setting( 'beetle_theme_options[excerpt_length]', array(
-        'default'           => 30,
+        'default'           => 20,
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'absint'
@@ -145,6 +149,40 @@ function beetle_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 
+	// Add Post Footer Settings
+	$wp_customize->add_setting( 'beetle_theme_options[single_posts_headline]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Beetle_Customize_Header_Control(
+        $wp_customize, 'beetle_theme_options[single_posts_headline]', array(
+            'label' => esc_html__( 'Single Posts', 'beetle' ),
+            'section' => 'beetle_section_post',
+            'settings' => 'beetle_theme_options[single_posts_headline]',
+            'priority' => 8
+            )
+        )
+    );
+	
+	$wp_customize->add_setting( 'beetle_theme_options[post_image]', array(
+        'default'           => false,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'beetle_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'beetle_theme_options[post_image]', array(
+        'label'    => esc_html__( 'Display featured image on single posts', 'beetle' ),
+        'section'  => 'beetle_section_post',
+        'settings' => 'beetle_theme_options[post_image]',
+        'type'     => 'checkbox',
+		'priority' => 9
+		)
+	);
+	
 	$wp_customize->add_setting( 'beetle_theme_options[meta_tags]', array(
         'default'           => false,
 		'type'           	=> 'option',
@@ -157,27 +195,9 @@ function beetle_customize_register_post_settings( $wp_customize ) {
         'section'  => 'beetle_section_post',
         'settings' => 'beetle_theme_options[meta_tags]',
         'type'     => 'checkbox',
-		'priority' => 8
+		'priority' => 10
 		)
 	);
-	
-	// Add Post Footer Settings
-	$wp_customize->add_setting( 'beetle_theme_options[post_footer_headline]', array(
-        'default'           => '',
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'esc_attr'
-        )
-    );
-    $wp_customize->add_control( new Beetle_Customize_Header_Control(
-        $wp_customize, 'beetle_theme_options[post_footer_headline]', array(
-            'label' => esc_html__( 'Post Footer', 'beetle' ),
-            'section' => 'beetle_section_post',
-            'settings' => 'beetle_theme_options[post_footer_headline]',
-            'priority' => 9
-            )
-        )
-    );
 	$wp_customize->add_setting( 'beetle_theme_options[post_navigation]', array(
         'default'           => true,
 		'type'           	=> 'option',
@@ -190,7 +210,7 @@ function beetle_customize_register_post_settings( $wp_customize ) {
         'section'  => 'beetle_section_post',
         'settings' => 'beetle_theme_options[post_navigation]',
         'type'     => 'checkbox',
-		'priority' => 10
+		'priority' => 11
 		)
 	);
 	

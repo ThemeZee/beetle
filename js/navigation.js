@@ -115,6 +115,7 @@
 		$("#main-navigation").responsiveMenu({
 			menuClass: "main-navigation-menu",
 			toggleClass: "main-navigation-toggle",
+			toggleText: beetle_menu_title,
 			maxWidth: "60em"
 		});
 		

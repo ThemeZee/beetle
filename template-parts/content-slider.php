@@ -24,8 +24,6 @@
 			<div class="slide-content container clearfix">
 
 				<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-				
-				<?php beetle_entry_meta(); ?>
 			
 			</div>
 						

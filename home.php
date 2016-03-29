@@ -18,11 +18,11 @@ $theme_options = beetle_theme_options();
 					
 			<?php
 			// Display Latest Posts Title
-			if ( isset( $theme_options['latest_posts_title'] ) and $theme_options['latest_posts_title'] <> '' ) : ?>
+			if ( $theme_options['blog_title'] <> '' ) : ?>
 						
 				<header class="page-header">
 					
-					<h1 class="archive-title"><?php echo wp_kses_post($theme_options['latest_posts_title']); ?></h1>
+					<h1 class="archive-title"><?php echo wp_kses_post($theme_options['blog_title']); ?></h1>
 
 				</header><!-- .page-header -->
 		
@@ -31,7 +31,7 @@ $theme_options = beetle_theme_options();
 		 
 			<?php if (have_posts()) : while (have_posts()) : the_post();
 		
-				get_template_part( 'template-parts/content', $theme_options['post_content'] );
+				get_template_part( 'template-parts/content', $theme_options['post_layout'] );
 		
 				endwhile;
 

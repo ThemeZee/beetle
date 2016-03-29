@@ -44,47 +44,20 @@ function beetle_customize_register_general_settings( $wp_customize ) {
 		)
 	);
 	
-	// Add Post Layout Settings for archive posts
-	$wp_customize->add_setting( 'beetle_theme_options[post_layout_archives]', array(
-        'default'           => 'left',
+	// Add Title for latest posts setting
+	$wp_customize->add_setting( 'beetle_theme_options[blog_title]', array(
+        'default'           => esc_html__( 'Latest Posts', 'beetle' ),
 		'type'           	=> 'option',
         'transport'         => 'refresh',
-        'sanitize_callback' => 'beetle_sanitize_select'
+        'sanitize_callback' => 'esc_html'
 		)
 	);
-    $wp_customize->add_control( 'beetle_theme_options[post_layout_archives]', array(
-        'label'    => esc_html__( 'Post Layout (archive pages)', 'beetle' ),
+    $wp_customize->add_control( 'beetle_theme_options[blog_title]', array(
+        'label'    => esc_html__( 'Blog Title', 'beetle' ),
         'section'  => 'beetle_section_general',
-        'settings' => 'beetle_theme_options[post_layout_archives]',
-        'type'     => 'select',
-		'priority' => 4,
-        'choices'  => array(
-            'left' => esc_html__( 'Show featured image beside content', 'beetle' ),
-            'top' => esc_html__( 'Show featured image above content', 'beetle' ),
-			'none' => esc_html__( 'Hide featured image', 'beetle' )
-			)
-		)
-	);
-	
-	// Add Post Layout Settings for single posts
-	$wp_customize->add_setting( 'beetle_theme_options[post_layout_single]', array(
-        'default'           => 'header',
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'beetle_sanitize_select'
-		)
-	);
-    $wp_customize->add_control( 'beetle_theme_options[post_layout_single]', array(
-        'label'    => esc_html__( 'Post Layout (single post)', 'beetle' ),
-        'section'  => 'beetle_section_general',
-        'settings' => 'beetle_theme_options[post_layout_single]',
-        'type'     => 'select',
-		'priority' => 5,
-        'choices'  => array(
-            'header' => esc_html__( 'Show featured image as header image', 'beetle' ),
-            'top' => esc_html__( 'Show featured image above content', 'beetle' ),
-			'none' => esc_html__( 'Hide featured image', 'beetle' )
-			)
+        'settings' => 'beetle_theme_options[blog_title]',
+        'type'     => 'text',
+		'priority' => 1
 		)
 	);
 

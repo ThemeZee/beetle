@@ -137,6 +137,9 @@ function beetle_scripts() {
 	// Register and enqueue navigation.js
 	wp_enqueue_script( 'beetle-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery') );
 	
+	// Passing Parameters to Navigation.js Javascript
+	wp_localize_script( 'beetle-jquery-navigation', 'beetle_menu_title', esc_html__( 'Menu', 'beetle' ) );
+	
 	// Register and Enqueue Google Fonts
 	wp_enqueue_style( 'beetle-default-fonts', beetle_google_fonts_url(), array(), null );
 
@@ -176,10 +179,13 @@ function beetle_add_image_sizes() {
 	// Add Custom Header Image Size
 	add_image_size( 'beetle-header-image', 1230, 410, true );
 	
+	// Add Image Size for Archives
+	add_image_size( 'beetle-thumbnail-archive', 350, 280, true );
+	
 	// Add different thumbnail sizes for widgets and post layouts
 	add_image_size( 'beetle-thumbnail-small', 100, 80, true );
-	add_image_size( 'beetle-thumbnail-medium', 350, 280, true );
-	add_image_size( 'beetle-thumbnail-large', 475, 380, true );
+	add_image_size( 'beetle-thumbnail-medium', 350, 250, true );
+	add_image_size( 'beetle-thumbnail-large', 420, 300, true );
 	
 }
 add_action( 'after_setup_theme', 'beetle_add_image_sizes' );

@@ -27,7 +27,7 @@ $theme_options = beetle_theme_options();
 			<?php /* Start the Loop */ 
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', $theme_options['post_content'] );
+				get_template_part( 'template-parts/content', $theme_options['post_layout'] );
 
 			endwhile;
 			

@@ -35,11 +35,6 @@ function beetle_body_classes( $classes ) {
 		$classes[] = 'sidebar-left';
 	}
 	
-	// Add Small Post Layout class
-	if ( ( is_archive() or is_home() ) and 'left' == $theme_options['post_layout_archives'] ) {
-		$classes[] = 'post-layout-small';
-	}
-
 	return $classes;
 }
 add_filter( 'body_class', 'beetle_body_classes' );
