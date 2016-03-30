@@ -58,7 +58,7 @@ function beetle_excerpt_length($length) {
 		return 30; // number of words
 	endif;
 }
-add_filter('excerpt_length', 'beetle_excerpt_length');
+add_filter( 'excerpt_length', 'beetle_excerpt_length' );
 
 
 /**
@@ -71,6 +71,18 @@ function beetle_magazine_posts_excerpt_length($length) {
     return 15;
 }
 
+/**
+ * Change excerpt more text for posts
+ *
+ * @param string $more_text Excerpt More Text
+ * @return string
+ */
+function beetle_excerpt_more( $more_text ) {
+	
+	return '';
+
+}
+add_filter( 'excerpt_more', 'beetle_excerpt_more' );
 
 /**
  * Set wrapper start for wooCommerce
@@ -80,8 +92,8 @@ function beetle_wrapper_start() {
 	echo '<section id="primary" class="content-area">';
 	echo '<main id="main" class="site-main" role="main">';
 }
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-add_action('woocommerce_before_main_content', 'beetle_wrapper_start', 10);
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
+add_action( 'woocommerce_before_main_content', 'beetle_wrapper_start', 10 );
 
 
 /**
@@ -92,5 +104,5 @@ function beetle_wrapper_end() {
 	echo '</main><!-- #main -->';
 	echo '</section><!-- #primary -->';
 }
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-add_action('woocommerce_after_main_content', 'beetle_wrapper_end', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
+add_action( 'woocommerce_after_main_content', 'beetle_wrapper_end', 10 );
