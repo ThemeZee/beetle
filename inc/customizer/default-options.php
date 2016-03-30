@@ -52,7 +52,7 @@ function beetle_default_options() {
 		'meta_category'						=> true,
 		'post_image'						=> true,
 		'meta_tags'							=> true,
-		'post_navigation'					=> false,
+		'post_navigation'					=> true,
 		'slider_magazine' 					=> false,
 		'slider_blog' 						=> false,
 		'slider_category' 					=> 0,

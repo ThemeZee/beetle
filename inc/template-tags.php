@@ -8,18 +8,28 @@
  * @package Beetle
  */
 	
+	
+if ( ! function_exists( 'beetle_site_title' ) ):
 /**
  * Displays the site title in the header area
  */
-function beetle_site_title() { ?>
+function beetle_site_title() {
+	
+	// Get Theme Options from Database
+	$theme_options = beetle_theme_options();
 
-	<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-		<h1 class="site-title"><?php bloginfo('name'); ?></h1>
-	</a>
+	if ( ( is_home() and $theme_options['blog_title'] == '' ) or is_page_template( 'template-magazine.php' )  ) : ?>
+		
+		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+	
+	<?php else : ?>
+		
+		<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+	
+	<?php endif; 
 
-<?php
 }
-add_action( 'beetle_site_title', 'beetle_site_title' );
+endif;
 
 
 if ( ! function_exists( 'beetle_header_image' ) ):

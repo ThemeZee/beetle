@@ -11,7 +11,7 @@
 		<?php // Display Post Thumbnail or default thumbnail
 		if( '' != get_the_post_thumbnail() ) :
 
-			the_post_thumbnail('beetle-header-image', array('class' => 'slide-image'));
+			the_post_thumbnail( 'beetle-header-image', array( 'class' => 'slide-image' ) );
 
 		else: ?>
 
@@ -23,7 +23,7 @@
 		
 			<div class="slide-content container clearfix">
 
-				<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+				<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 			
 			</div>
 						
