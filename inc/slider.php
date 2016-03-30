@@ -71,25 +71,4 @@ function beetle_slider_options() {
 	wp_localize_script( 'beetle-post-slider', 'beetle_slider_params', $params );
 	
 } // beetle_slider_options
-add_action('wp_enqueue_scripts', 'beetle_slider_options');
-
-
-/**
- * Display Post Slider
- */
-function beetle_slider() { 
-	
-	// Get Theme Options from Database
-	$theme_options = beetle_theme_options();
-
-	// Display Featured Post Slideshow if activated
-	if ( is_page_template( 'template-slider.php' )
-		or ( true == $theme_options['slider_blog'] and is_home() ) 
-		or ( true == $theme_options['slider_magazine'] and is_page_template( 'template-magazine.php' ) )
-	) { 
-
-		get_template_part( 'template-parts/post-slider' );
-
-	}
-
-}
+add_action( 'wp_enqueue_scripts', 'beetle_slider_options' );

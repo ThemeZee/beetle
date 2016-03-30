@@ -69,11 +69,9 @@
 			</div>
 		
 		</header><!-- #masthead -->
-
+		
+		<?php beetle_breadcrumbs(); ?>
+		
 		<div id="content" class="site-content container clearfix">
 		
 			<?php beetle_header_image(); ?>
-			
-			<?php beetle_slider(); ?>
-			
-			<?php beetle_breadcrumbs(); ?>

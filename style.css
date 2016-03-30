@@ -289,8 +289,8 @@ select,
 textarea {
 	color: #353535;
 	font-family: 'Open Sans', Tahoma, Arial;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 15px;
+	font-size: 0.9375rem;
 	line-height: 1.75;
 }
 
@@ -657,8 +657,8 @@ textarea {
 	padding: 0;
 	color: #cc77bb;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 36px;
-	font-size: 2.25rem;
+	font-size: 32px;
+	font-size: 2rem;
 	font-weight: bold;
 	text-decoration: none;
 }
@@ -1233,6 +1233,11 @@ textarea {
 	margin: 1em 0 0;
 }
 
+.entry-content {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
 .sticky {}
 
 /* Read more Link */
@@ -1383,8 +1388,6 @@ textarea {
 	padding: 0.5em 0;
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
-	font-size: 15px;
-	font-size: 0.9375rem;
 }
 
 .post-navigation .nav-links:before,
@@ -1486,15 +1489,14 @@ textarea {
 
 /* Breadcrumbs */
 .breadcrumbs {
-	margin: 0;
-	border-bottom: 1px solid #ddd;
+	margin: 0 2em;
 }
 
 .breadcrumbs-container {
-	padding: 0.6em 0;
-	color: #222;
-	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	padding: 0.5em 1em;
+	background: #eee;
 }
 
 .breadcrumbs .trail-browse,
@@ -1507,8 +1509,8 @@ textarea {
 
 .breadcrumbs .trail-browse {
 	margin-right: 0.5em;
-	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 13px;
+	font-size: 0.8125rem;
 	font-weight: normal;
 }
 
@@ -1666,21 +1668,18 @@ textarea {
 # 12.0 - Footer
 --------------------------------------------------------------*/
 .footer-wrap {
-	padding-bottom: 2em;
-	background: #fff;
+	background: #353535;
 }
 
 .site-footer {
-	padding: 0 2em;
 	font-size: 14px;
 	font-size: 0.875rem;
 	color: #fff;
-	background: #353535;
 }
 
 .site-footer .site-info {
 	float: left;
-	padding: 1em 0;
+	padding: 1em 2em;
 }
 
 .site-footer a:link,
@@ -2055,11 +2054,6 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
 	
-	.site-branding .site-title {
-		font-size: 34px;
-		font-size: 2.125rem;
-	}
-	
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .large-post .entry-title 	{
 		font-size: 18px;
@@ -2136,11 +2130,6 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 35em) {
 
-	.site-branding .site-title {
-		font-size: 32px;
-		font-size: 2rem;
-	}
-	
 	.small-archive-post .entry-content {
 		display: none;
 	}
@@ -2179,6 +2168,10 @@ object {
 	.header-main {
 		padding-top: 1.5em;
 		padding-bottom: 1.5em;
+	}
+	
+	.breadcrumbs {
+		margin: 0 1.5em;
 	}
 	
 	.page-title,
@@ -2235,8 +2228,8 @@ object {
 @media only screen and (max-width: 20em) {
 	
 	.site-branding .site-title {
-		font-size: 30px;
-		font-size: 1.875rem;
+		font-size: 28px;
+		font-size: 1.75rem;
 	}
 	
 	.page-title,

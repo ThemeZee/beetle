@@ -13,7 +13,7 @@
 	
 	<?php do_action( 'beetle_before_footer' ); ?>
 
-	<div id="footer" class="footer-wrap container">
+	<div id="footer" class="footer-wrap">
 	
 		<footer id="colophon" class="site-footer clearfix" role="contentinfo">
 

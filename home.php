@@ -11,6 +11,13 @@ get_header();
 
 // Get Theme Options from Database
 $theme_options = beetle_theme_options();
+
+// Display Slider
+if ( true == $theme_options['slider_blog'] ) :
+
+	get_template_part( 'template-parts/post-slider' );
+	
+endif; 
 ?>
 		
 	<section id="primary" class="content-area">

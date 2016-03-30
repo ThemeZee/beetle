@@ -126,20 +126,12 @@
 			maxWidth: "60em"
 		});
 		
-		/* Setup Top Navigation */
-		$("#footer-links").responsiveMenu({
+		/* Setup Footer Navigation */
+		$("#footer-navigation").responsiveMenu({
 			menuClass: "footer-navigation-menu",
 			toggleClass: "footer-navigation-toggle",
-			maxWidth: "60em"
+			maxWidth: "40em"
 		});
-		
-		/* Setup Footer Navigation 
-		$('.footer-navigation-menu').before('<button id=\"footer-links-toggle\" class=\"footer-navigation-toggle\"></button>');
-		
-		$('#footer-links-toggle').on('click', function(){
-			$('.footer-navigation-menu').slideToggle();
-			$(this).toggleClass('active');
-		});*/
 
 	} );
 
