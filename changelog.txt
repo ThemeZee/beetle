@@ -2,6 +2,11 @@
 Beetle Changelog
 ===================================
 
+Version 1.0.1
+-----------------------------------
+[changed] styling of post slider
+[added] new fonts and small design adjustments
+
 Version 1.0
 -----------------------------------
 Final Version

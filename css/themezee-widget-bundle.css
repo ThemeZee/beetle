@@ -59,29 +59,8 @@
 	height: auto;
 }
 
-.tzwb-recent-posts .tzwb-posts-list li:before {
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 16px 'Genericons';
-	vertical-align: middle;
-	color: #555;
-	margin: 0 0.2em 0 0;
-	content: '\f303';
-}
-
-.tzwb-recent-posts .tzwb-posts-list li.tzwb-has-thumbnail:before {
-	display: none;
-}
-
 .tzwb-posts-list .tzwb-entry-meta {
 	margin: 0.2em 0 0.6em;
-	color: #777;
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-.tzwb-posts-list .tzwb-entry-meta span {
-	margin-right: 0.4em;
 }
 
 /*--------------------------------------------------------------
@@ -98,27 +77,13 @@
 	margin: 0.3em 0.8em 0.6em 0;
 }
 
-.tzwb-recent-comments .tzwb-comments-list li:before {
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 16px 'Genericons';
-	vertical-align: middle;
-	color: #555;
-	margin: 0 0.2em 0 0;
-	content: '\f300';
-}
-
-.tzwb-recent-comments .tzwb-comments-list li.tzwb-has-avatar:before  {
-	display: none;
-}
-
 .tzwb-comments-list .tzwb-comment-content {
 	font-style: italic;
 }
 
 .tzwb-comments-list .tzwb-comment-date {
-	margin: 0.2em 0;
-	color: #777;
+	margin: 0.2em 0 0.6em;
+	color: #999;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -152,7 +117,6 @@
 	display: block;
 	margin: 0 0.3em 0.3em 0;
 	padding: 0.3em 0.8em;
-	font-family: 'Open Sans', Tahoma, Arial;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-weight: bold;
@@ -207,124 +171,7 @@
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent ul li .tzwb-entry-meta {
-	margin: 0.2em 0;
-	color: #777;
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-/* Archive & Category Tab */
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-archives,
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-categories {
-	list-style: none;
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-archives li a:before,
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-categories li a:before {
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 18px 'Genericons';
-	vertical-align: middle;
-	color: #555;
-	margin: 0 0.3em 0 0;
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-archives li a:before {
-	content: '\f307';
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-categories li a:before {
-	content: '\f301';
-}
-
-/* Recent Posts & Comments Tab */
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-posts-list,
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list {
-	list-style: none;
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-posts-list li:before, 
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list li:before {
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 16px 'Genericons';
-	vertical-align: middle;
-	color: #555;
-	margin: 0 0.2em 0 0;
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-posts-list li:before {
-	content: '\f303';
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list li:before {
-	content: '\f300';
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-posts-list li.tzwb-has-thumbnail:before,
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list li.tzwb-has-avatar:before  {
-	display: none;
-}
-
-/* Pages Tab */
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-pages,
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-pages ul {
-	list-style: none;
-}
-
-.tzwb-tabbed-content .tzwb-tabcontent .tzwb-tabcontent-pages li a:before {
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 18px 'Genericons';
-	vertical-align: middle;
-	color: #555;
-	margin: 0 0.1em 0 0;
-	content: '\f432';
-	-webkit-transform:rotate(90deg);
-	-moz-transform:rotate(90deg);
-	-o-transform:rotate(90deg);
-	-ms-transform:rotate(90deg);
-}
-
-/* Tagcloud Tab */
-.tzwb-tabcontent-tagcloud {
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-.tzwb-tabcontent-tagcloud:before,
-.tzwb-tabcontent-tagcloud:after {
-	content: "";
-	display: table;
-}
-
-.tzwb-tabcontent-tagcloud:after {
-	clear: both;
-}
-
-.tzwb-tabcontent-tagcloud a {
-	float: left;
-	display: inline-block;
-	margin: 0 2px 2px 0;
-	padding: 0.3em 0.6em;
-	text-decoration: none;
-	font-size: 1.0em !important;
-	border: 1px solid #cc77bb;
-}
-
-.tzwb-tabcontent-tagcloud a:link, 
-.tzwb-tabcontent-tagcloud a:visited {
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	-ms-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-}
-
-.tzwb-tabcontent-tagcloud a:hover, 
-.tzwb-tabcontent-tagcloud a:active {
-	color: #fff;
-	background-color: #cc77bb;
+	margin: 0.2em 0 0.6em;
 }
 
 /*--------------------------------------------------------------

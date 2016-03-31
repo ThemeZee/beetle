@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/beetle/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Beetle is a fast & elegant Lifestyle Magazine WordPress theme. It comes with a clean typography, subtle colors and works great with strong pictures. Beetle makes use of the Customizer and a few widget areas which allow you to easily set up your online magazine in just a few minutes.
-Version: 1.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: beetle
@@ -444,7 +444,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: #444;
+	color: #353535;
 }
 
 a:focus {
@@ -820,7 +820,7 @@ textarea {
 
 .main-navigation-menu ul .menu-item-has-children > a:after {
 	display: inline-block;
-	margin: 0.2em 0 0 0.2em;
+	margin: 0.4em 0 0 0.2em;
 	font-size: 14px;
 	line-height: 1;
 	font-family: 'Genericons';
@@ -1030,7 +1030,6 @@ textarea {
 	font-size: 16px;
 	font-size: 1rem;
 	border: none;
-	background: #cc77bb;
 	padding: 0.4em 0.6em;
 	cursor: pointer;
 }
@@ -1049,10 +1048,6 @@ textarea {
 	vertical-align: middle;
 	color: #fff;
 	content: '\f400';
-}
-
-.search-form .search-submit:hover {
-	background: #353535;
 }
 
 
@@ -1107,6 +1102,11 @@ textarea {
 .widget-magazine-posts .medium-post .entry-title {
 	font-size: 16px;
 	font-size: 1rem;
+}
+
+.widget-magazine-posts .medium-post .entry-content {
+	font-size: 15px;
+	font-size: 0.9375rem;
 }
 
 .widget-magazine-posts .small-post {
@@ -1225,7 +1225,7 @@ textarea {
 }
 
 .entry-title a:hover, 
-.entry-title a:active{
+.entry-title a:active {
 	color: #cc77bb;
 }
 
@@ -1362,6 +1362,7 @@ textarea {
 	text-decoration: none;
 	color: #fff;
 	background: #cc77bb;
+	border: none;
 	font-size: 12px !important;
 	font-size: 0.75rem !important;
 	font-weight: bold;
@@ -1411,26 +1412,26 @@ textarea {
 /* Theme Pagination */
 .post-pagination {
 	display: block;
-	border-top: 2px solid #353535;
 	margin: 0 0 2em;
 }
+
 .post-pagination a,
 .post-pagination .current {
 	display: inline-block;
 	margin: 0;
-	padding: 0.5em 0.9em;
+	padding: 0.5em 1em;
     text-align: center;
 	text-decoration: none;
-	font-family: 'Open Sans', Tahoma, Arial;
-	font-size: 13px;
-	font-size: 0.8125rem;
+	font-size: 14px;
+	font-size: 0.875rem;
 	font-weight: bold;
-	color: #cc77bb;
-	text-transform: uppercase;
+	color: #fff;
+	background: #353535;
 }
 
 .post-pagination a:link, 
 .post-pagination a:visited {
+	color: #fff;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-ms-transition: all 0.2s ease;
@@ -1440,7 +1441,7 @@ textarea {
 
 .post-pagination a:hover,
 .post-pagination .current {
-	color: #353535;
+	background: #cc77bb;
 }
 
 /* Infinite Scroll Pagination */

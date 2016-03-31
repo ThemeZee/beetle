@@ -214,7 +214,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 	
 	.post-slider .zeeslide .slide-post {
 		width: 60%;
-		border: 0.5em solid #cc77bb;
+		border-width: 0.5em;
 		left: 20%;
 	}
 
