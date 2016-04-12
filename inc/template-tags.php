@@ -7,8 +7,24 @@
  *
  * @package Beetle
  */
+
+ 
+if ( ! function_exists( 'beetle_site_logo' ) ): 
+/**
+ * Displays the site logo in the header area
+ */
+function beetle_site_logo() {
+
+	if ( function_exists( 'the_custom_logo' ) ) {
+		
+		the_custom_logo();
 	
+	}  
 	
+}
+endif;
+
+
 if ( ! function_exists( 'beetle_site_title' ) ):
 /**
  * Displays the site title in the header area
@@ -17,6 +33,11 @@ function beetle_site_title() {
 	
 	// Get Theme Options from Database
 	$theme_options = beetle_theme_options();
+	
+	// Return early if site title is deactivated
+	if( false == $theme_options['site_title'] ) {
+		return;
+	}
 
 	if ( ( is_home() and $theme_options['blog_title'] == '' ) or is_page_template( 'template-magazine.php' )  ) : ?>
 		

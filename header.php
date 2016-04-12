@@ -33,6 +33,7 @@
 						
 				<div id="logo" class="site-branding clearfix">
 				
+					<?php beetle_site_logo(); ?>
 					<?php beetle_site_title(); ?>
 				
 				</div><!-- .site-branding -->
