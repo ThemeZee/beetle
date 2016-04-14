@@ -2,6 +2,10 @@
 Beetle Changelog
 ===================================
 
+Version 1.0.3
+-----------------------------------
+[fixed] navigation dropdown menus going off screen for large submenus
+
 Version 1.0.2
 -----------------------------------
 [added] support for new custom logo feature from WordPress 4.5

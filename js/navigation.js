@@ -73,6 +73,13 @@
 					$(this).find('ul:first').css({visibility: 'hidden'});
 				});
 				
+				/* Make sure menu does not fly off the right of the screen */
+				$menu.find('li ul li').mouseenter(function(){
+					  if ($(this).children('ul').offset().left + 250 > $(window).width()) {       
+						$(this).children('ul').css( 'right', '16rem' );          
+					  } 
+				});
+				
 			}
 			
 		}
