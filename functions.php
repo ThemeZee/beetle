@@ -68,6 +68,9 @@ function beetle_setup() {
 	// Add Theme Support for wooCommerce
 	add_theme_support( 'woocommerce' );
 	
+	// Add extra theme styling to the visual editor
+	add_editor_style( array( 'css/editor-style.css', beetle_google_fonts_url() ) );
+	
 }
 endif; // beetle_setup
 add_action( 'after_setup_theme', 'beetle_setup' );
@@ -80,7 +83,7 @@ add_action( 'after_setup_theme', 'beetle_setup' );
  * @global int $content_width
  */
 function beetle_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'beetle_content_width', 810 );
+	$GLOBALS['content_width'] = apply_filters( 'beetle_content_width', 750 );
 }
 add_action( 'after_setup_theme', 'beetle_content_width', 0 );
 
