@@ -84,19 +84,23 @@ F) Licenses of bundled resources
 	License: Distributed under the terms of the MIT License (http://opensource.org/licenses/MIT)
 	Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
 	
-	4. FlexSlider - https://github.com/woothemes/FlexSlider
+	4. html5shiv.js - https://github.com/aFarkas/html5shiv
+	License: Distributed under the terms of the MIT/GPL2 License (http://opensource.org/licenses/MIT, https://www.gnu.org/licenses/gpl-2.0.html)
+	Copyright: 2011-2016 Alexander Farkas, John-David Dalton and Jonathan Neal
+	
+	5. FlexSlider - https://github.com/woothemes/FlexSlider
 	License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 	Copyright: 2015 WooThemes, http://www.woothemes.com
 	
-	5. Open Sans Font - https://www.google.com/fonts/specimen/Open Sans
+	6. Open Sans Font - https://www.google.com/fonts/specimen/Open Sans
 	License: Distributed under the terms of the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 	Copyright: 2013 Steve Matteson
 	
-	6. Open Sans Font - https://www.google.com/fonts/specimen/Open+Sans
+	7. Open Sans Font - https://www.google.com/fonts/specimen/Open+Sans
 	License: Distributed under the terms of the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 	Copyright: 2014 Steve Matteson
 	
-	7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
+	8. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 	
 	Image 1: https://pixabay.com/en/ladybug-beetle-insect-lucky-charm-1036453/
 	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)

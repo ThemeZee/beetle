@@ -2,6 +2,11 @@
 Beetle Changelog
 ===================================
 
+Version 1.0.4
+-----------------------------------
+[added] license credit information about html5shiv
+[fixed] wrong used escaping function of displaying blog title
+
 Version 1.0.3
 -----------------------------------
 [fixed] navigation dropdown menus going off screen for large submenus

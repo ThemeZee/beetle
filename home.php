@@ -29,7 +29,7 @@ endif;
 						
 				<header class="page-header">
 					
-					<h1 class="archive-title"><?php echo wp_kses_post($theme_options['blog_title']); ?></h1>
+					<h1 class="archive-title"><?php echo esc_html( $theme_options['blog_title'] ); ?></h1>
 
 				</header><!-- .page-header -->
 		
