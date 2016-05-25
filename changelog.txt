@@ -2,6 +2,18 @@
 Beetle Changelog
 ===================================
 
+Version 1.0.6
+-----------------------------------
+[added] editor-style.css
+[added] selective refresh support in customizer for sidebars and widgets
+[added] version numbers to wp_enqueue_style and wp_enqueue_script functions
+[updated] flexlider, html5shiv and Genericons
+[improved] styling of lists, tables and blockquotes
+
+Version 1.0.5
+-----------------------------------
+[fixed] version number for theme review
+
 Version 1.0.4
 -----------------------------------
 [added] license credit information about html5shiv
