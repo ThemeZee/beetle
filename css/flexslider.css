@@ -18,51 +18,51 @@
 .zeeflex-slider a:hover,
 .zeeflex-container a:focus,
 .zeeflex-slider a:focus {
-  outline: none;
+	outline: none;
 }
 .zeeslides,
 .zeeslides > li,
 .zeeflex-control-nav,
 .zeeflex-direction-nav {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 .zeeflex-pauseplay span {
-  text-transform: capitalize;
+	text-transform: capitalize;
 }
 
 /* ====================================================================================================================
  * BASE STYLES
  * ====================================================================================================================*/
 .zeeflexslider {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 .zeeflexslider .zeeslides > li {
-  display: none;
-  -webkit-backface-visibility: hidden;
+	display: none;
+	-webkit-backface-visibility: hidden;
 }
 .zeeflexslider .zeeslides img {
-  width: 100%;
-  display: block;
+	width: 100%;
+	display: block;
 }
 .zeeflexslider .zeeslides:after {
-  content: "\0020";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
+	content: "\0020";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
 }
 html[xmlns] .zeeflexslider .zeeslides {
-  display: block;
+	display: block;
 }
 * html .zeeflexslider .zeeslides {
-  height: 1%;
+	height: 1%;
 }
 .no-js .zeeflexslider .zeeslides > li:first-child {
-  display: block;
+	display: block;
 }
 
 /* ====================================================================================================================
@@ -87,12 +87,12 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 .zeeflex-viewport {
-  max-height: 2000px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
+	max-height: 2000px;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
 }
 
 .post-slider .zeeslide .slide-image {
@@ -193,7 +193,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 # Media Queries
 --------------------------------------------------------------*/
 @media only screen and (max-width: 60em) {
-	
+
 	.post-slider .zeeslide .slide-post {
 		width: 50%;
 		left: 25%;
@@ -202,16 +202,16 @@ html[xmlns] .zeeflexslider .zeeslides {
 	.post-slider .zeeslide .slide-content {
 		padding: 1.5em;
 	}
-	
+
 	.post-slider .zeeslide .slide-content .entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
-	
+
 }
 
 @media only screen and (max-width: 50em) {
-	
+
 	.post-slider .zeeslide .slide-post {
 		width: 60%;
 		border-width: 0.5em;
@@ -226,7 +226,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
-	
+
 	.post-slider-controls .zeeflex-direction-nav a {
 		margin: -25px 0 0;
 		width: 40px;
@@ -236,7 +236,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 	.post-slider-controls .zeeflex-direction-nav a:before {
 		font: normal 48px Genericons;
 	}
-	
+
 	.post-slider-controls .zeeflex-direction-nav a.zeeflex-next:before {
 		margin: -3px 0 0 -3px;
 	}
@@ -244,11 +244,11 @@ html[xmlns] .zeeflexslider .zeeslides {
 	.post-slider-controls .zeeflex-direction-nav a.zeeflex-prev:before {
 		margin: 0 0 0 -3px;
 	}
-	
+
 }
 
 @media only screen and (max-width: 40em) {
-	
+
 	.post-slider .zeeslide .slide-post {
 		position: static;
 		width: 100%;
@@ -258,21 +258,21 @@ html[xmlns] .zeeflexslider .zeeslides {
 		border: none;
 		border-top: 0.5em solid #cc77bb;
 	}
-	
+
 	.post-slider .zeeslide .slide-content {
 		padding: 0.75em 0;
 	}
-	
+
 	.post-slider-controls .zeeflex-direction-nav a {
 		top: 40%;
 	}
-	
+
 }
 
 @media only screen and (max-width: 20em) {
-	
+
 	.post-slider-controls .zeeflex-direction-nav a {
 		top: 25%;
 	}
-	
+
 }
