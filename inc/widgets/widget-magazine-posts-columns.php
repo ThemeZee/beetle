@@ -285,8 +285,8 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 	/**
 	 * Displays Category Widget Title
 	 *
-	 * @param array $args / Parameters from widget area created with register_sidebar().
-	 * @param array $settings / Settings for this widget instance.
+	 * @param array  $args / Parameters from widget area created with register_sidebar().
+	 * @param array  $settings / Settings for this widget instance.
 	 * @param int    $category_id / ID of the selected category.
 	 * @param String $category_title / Category Title.
 	 */
