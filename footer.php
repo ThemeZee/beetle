@@ -6,7 +6,7 @@
  *
  * @package Beetle
  */
- 
+
 ?>
 	
 	</div><!-- #content -->
