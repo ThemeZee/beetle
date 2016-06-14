@@ -146,7 +146,7 @@ function beetle_customize_register_slider_settings( $wp_customize ) {
 			'min'   => 1000,
 			'step'  => 100,
 			),
-		),
+		)
 	);
 
 }
