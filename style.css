@@ -1447,6 +1447,16 @@ textarea {
 	float: right;
 }
 
+.post-navigation .nav-links .nav-previous a:before {
+	margin-right: 3px;
+	content: "\00AB";
+}
+
+.post-navigation .nav-links .nav-next a:after {
+	margin-left: 4px;
+	content: "\00BB";
+}
+
 /* Theme Pagination */
 .post-pagination {
 	display: block;
@@ -1607,7 +1617,7 @@ textarea {
 .comment {
 	margin: 0 0 1.5em;
 	padding: 0.5em 1em 1.5em;
-	border-bottom: 1px solid #353535;
+	border-bottom: 1px solid #ddd;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -1655,7 +1665,7 @@ textarea {
 	margin-top: 1.5em;
 	padding-top: 1em;
 	list-style: none;
-	border-top: 1px solid #353535;
+	border-bottom: 1px solid #ddd;
 }
 
 .comment .comment-respond {
