@@ -9,9 +9,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'small-archive-post clearfix' ); ?>>
 
-	<a href="<?php the_permalink(); ?>" rel="bookmark">
-		<?php the_post_thumbnail( 'beetle-thumbnail-archive' ); ?>
-	</a>
+	<?php beetle_post_image( 'beetle-thumbnail-archive' ); ?>
 
 	<header class="entry-header">
 
