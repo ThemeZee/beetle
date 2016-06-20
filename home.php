@@ -23,7 +23,9 @@ endif;
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php
+		<?php
+		if ( have_posts() ) :
+
 			// Display Latest Posts Title.
 			if ( '' !== $theme_options['blog_title'] ) : ?>
 
@@ -33,19 +35,22 @@ endif;
 
 				</header><!-- .page-header -->
 
-			<?php endif; ?>
+			<?php endif;
 
+			while ( have_posts() ) : the_post();
 
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/content', $theme_options['post_layout'] );
 
-					get_template_part( 'template-parts/content', $theme_options['post_layout'] );
+			endwhile;
 
-				endwhile;
+			// Display Pagination.
+			beetle_pagination();
 
-				// Display Pagination.
-				beetle_pagination();
+		else :
 
-			endif; ?>
+			get_template_part( 'template-parts/content', 'none' );
+
+		endif; ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
