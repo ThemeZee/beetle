@@ -2,6 +2,13 @@
 Beetle Changelog
 ===================================
 
+Version 1.0.8
+-----------------------------------
+[added] setting to display tagline
+[added] content-none.php template file
+[added] post image template function
+[improved] accessibility of navigation menus
+
 Version 1.0.7
 -----------------------------------
 [added] added alt and srcset attributes to custom header image

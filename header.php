@@ -35,6 +35,7 @@
 
 					<?php beetle_site_logo(); ?>
 					<?php beetle_site_title(); ?>
+					<?php beetle_site_description(); ?>
 
 				</div><!-- .site-branding -->
 
@@ -48,7 +49,6 @@
 					endif; ?>
 
 				</div><!-- .header-widgets -->
-
 
 			</div><!-- .header-main -->
 
