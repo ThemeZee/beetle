@@ -82,7 +82,7 @@
 					if ( $( this ).children( 'ul.sub-menu' ).offset().left + 250 > $( window ).width() ) {
 						$( this ).children( 'ul.sub-menu' ).css( { right: '100%', left: 'auto' } );
 					}
-				});
+				} );
 
 				// Add menu items with submenus to aria-haspopup="true".
 				$menu.find( 'li.menu-item-has-children' ).attr( 'aria-haspopup', 'true' ).attr( 'aria-expanded', 'false' );
