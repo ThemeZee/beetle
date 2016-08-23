@@ -26,6 +26,9 @@ For more information about Beetle please go to https://themezee.com/themes/beetl
 
 == Changelog ==
 
+= 1.1.0 =
+* added Right-to-Left language support
+
 = 1.0.9 =
 * added readme.txt file
 * improved styling of navigation menus
