@@ -29,7 +29,7 @@ function beetle_customize_register_options( $wp_customize ) {
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
 		'title'          => esc_html__( 'Theme Options', 'beetle' ),
-		'description'    => '',
+		'description'    => beetle_customize_theme_links(),
 	) );
 
 	// Add postMessage support for site title and description.
@@ -122,32 +122,54 @@ add_action( 'customize_preview_init', 'beetle_customize_preview_js' );
 
 
 /**
- * Embed JS file for Customizer Controls
- */
-function beetle_customize_controls_js() {
-
-	wp_enqueue_script( 'beetle-customizer-controls', get_template_directory_uri() . '/js/customizer-controls.js', array(), '20151202', true );
-
-	// Localize the script.
-	wp_localize_script( 'beetle-customizer-controls', 'beetle_theme_links', array(
-		'title'	=> esc_html__( 'Theme Links', 'beetle' ),
-		'themeURL'	=> esc_url( __( 'https://themezee.com/themes/beetle/', 'beetle' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=beetle&utm_content=theme-page' ),
-		'themeLabel'	=> esc_html__( 'Theme Page', 'beetle' ),
-		'docuURL'	=> esc_url( __( 'https://themezee.com/docs/beetle-documentation/', 'beetle' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=beetle&utm_content=documentation' ),
-		'docuLabel'	=> esc_html__( 'Theme Documentation', 'beetle' ),
-		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/beetle?filter=5' ),
-		'rateLabel'	=> esc_html__( 'Rate this theme', 'beetle' ),
-		)
-	);
-
-}
-add_action( 'customize_controls_enqueue_scripts', 'beetle_customize_controls_js' );
-
-
-/**
  * Embed CSS styles for the theme options in the Customizer
  */
 function beetle_customize_preview_css() {
-	wp_enqueue_style( 'beetle-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20151202' );
+	wp_enqueue_style( 'beetle-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20160915' );
 }
 add_action( 'customize_controls_print_styles', 'beetle_customize_preview_css' );
+
+/**
+ * Returns Theme Links
+ */
+function beetle_customize_theme_links() {
+
+	ob_start();
+	?>
+
+		<div class="theme-links">
+
+			<span class="customize-control-title"><?php esc_html_e( 'Theme Links', 'beetle' ); ?></span>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/beetle/', 'beetle' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=beetle&utm_content=theme-page" target="_blank">
+					<?php esc_html_e( 'Theme Page', 'beetle' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="http://preview.themezee.com/beetle/?utm_source=theme-info&utm_medium=textlink&utm_campaign=beetle&utm_content=demo" target="_blank">
+					<?php esc_html_e( 'Theme Demo', 'beetle' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/beetle-documentation/', 'beetle' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=beetle&utm_content=documentation" target="_blank">
+					<?php esc_html_e( 'Theme Documentation', 'beetle' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/beetle/reviews/?filter=5', 'beetle' ) ); ?>" target="_blank">
+					<?php esc_html_e( 'Rate this theme', 'beetle' ); ?>
+				</a>
+			</p>
+
+		</div>
+
+	<?php
+	$theme_links = ob_get_contents();
+	ob_end_clean();
+
+	return $theme_links;
+}

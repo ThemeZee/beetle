@@ -45,9 +45,9 @@ function beetle_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'beetle' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/beetle/', 'beetle' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=beetle&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'beetle' ); ?></a>
-				<a href="<?php echo esc_url( 'http://preview.themezee.com/beetle/?utm_source=theme-info&utm_medium=textlink&utm_campaign=beetle&utm_content=demo' ); ?>" target="_blank"><?php esc_html_e( 'Theme Demo', 'beetle' ); ?></a>
+				<a href="http://preview.themezee.com/beetle/?utm_source=theme-info&utm_medium=textlink&utm_campaign=beetle&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'beetle' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/beetle-documentation/', 'beetle' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=beetle&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'beetle' ); ?></a>
-				<a href="<?php echo esc_url( 'http://wordpress.org/support/view/theme-reviews/beetle?filter=5' ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'beetle' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/beetle/reviews/?filter=5', 'beetle' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'beetle' ); ?></a>
 			</p>
 		</div>
 		<hr>
@@ -107,10 +107,10 @@ function beetle_theme_info_page() {
 				<div class="column column-half clearfix">
 
 					<div class="section">
-						<h4><?php esc_html_e( 'Pro Version', 'beetle' ); ?></h4>
+						<h4><?php esc_html_e( 'Pro Version Add-on', 'beetle' ); ?></h4>
 
 						<p class="about">
-							<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'beetle' ), 'Beetle' ); ?>
+							<?php printf( esc_html__( 'Purchase the %s Pro Add-on and get additional features and advanced customization options.', 'beetle' ), 'Beetle' ); ?>
 						</p>
 						<p>
 							<a href="<?php echo esc_url( __( 'https://themezee.com/addons/beetle-pro/', 'beetle' ) . '?utm_source=theme-info&utm_medium=button&utm_campaign=beetle&utm_content=pro-version' ); ?>" target="_blank" class="button button-secondary">
@@ -124,17 +124,14 @@ function beetle_theme_info_page() {
 				<div class="column column-half clearfix">
 
 					<div class="section">
-						<h4><?php esc_html_e( 'ThemeZee Plugins', 'beetle' ); ?></h4>
+						<h4><?php esc_html_e( 'Recommended Plugins', 'beetle' ); ?></h4>
 
 						<p class="about">
-							<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'beetle' ); ?>
+							<?php esc_html_e( 'Extend the functionality of your WordPress website with our free and easy to use plugins.', 'beetle' ); ?>
 						</p>
 						<p>
-							<a href="<?php echo esc_url( __( 'https://themezee.com/plugins/', 'beetle' ) . '?utm_source=theme-info&utm_medium=button&utm_campaign=beetle&utm_content=plugins' ); ?>" target="_blank" class="button button-secondary">
-								<?php esc_html_e( 'Browse Plugins', 'beetle' ); ?>
-							</a>
-							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
-								<?php esc_html_e( 'Install now', 'beetle' ); ?>
+							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-secondary">
+								<?php esc_html_e( 'Install Plugins', 'beetle' ); ?>
 							</a>
 						</p>
 					</div>
@@ -152,7 +149,7 @@ function beetle_theme_info_page() {
 			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'beetle' ),
 				$theme->get( 'Name' ),
 				'<a target="_blank" href="' . __( 'https://themezee.com/', 'beetle' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=beetle" title="ThemeZee">ThemeZee</a>',
-			'<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/beetle?filter=5" title="Beetle Review">' . esc_html__( 'rate it', 'beetle' ) . '</a>'); ?>
+				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/beetle/reviews/?filter=5', 'beetle' ) . '" title="' . esc_attr__( 'Review Beetle', 'beetle' ) . '">' . esc_html__( 'rate it', 'beetle' ) . '</a>'); ?>
 			</p>
 
 		</div>
