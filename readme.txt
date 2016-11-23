@@ -26,6 +26,9 @@ For more information about Beetle please go to https://themezee.com/themes/beetl
 
 == Changelog ==
 
+= 1.1.2 =
+* improved escaping and sanitizing of widget settings and slider options
+
 = 1.1.1 =
 * fixed mobile menus on RTL language sites
 * moved Theme Links to Theme Options panel dropdown
