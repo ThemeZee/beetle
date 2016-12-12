@@ -125,7 +125,7 @@ add_action( 'customize_preview_init', 'beetle_customize_preview_js' );
  * Embed CSS styles for the theme options in the Customizer
  */
 function beetle_customize_preview_css() {
-	wp_enqueue_style( 'beetle-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20160915' );
+	wp_enqueue_style( 'beetle-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20161214' );
 }
 add_action( 'customize_controls_print_styles', 'beetle_customize_preview_css' );
 
@@ -148,7 +148,7 @@ function beetle_customize_theme_links() {
 			</p>
 
 			<p>
-				<a href="http://preview.themezee.com/beetle/?utm_source=theme-info&utm_medium=textlink&utm_campaign=beetle&utm_content=demo" target="_blank">
+				<a href="http://preview.themezee.com/?demo=beetle&utm_source=theme-info&utm_medium=textlink&utm_campaign=beetle&utm_content=demo" target="_blank">
 					<?php esc_html_e( 'Theme Demo', 'beetle' ); ?>
 				</a>
 			</p>
