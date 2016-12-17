@@ -45,7 +45,7 @@ function beetle_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'beetle' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/beetle/', 'beetle' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=beetle&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'beetle' ); ?></a>
-				<a href="http://preview.themezee.com/?demo=beetle&utm_source=theme-info&utm_medium=textlink&utm_campaign=beetle&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'beetle' ); ?></a>
+				<a href="http://preview.themezee.com/?demo=beetle&utm_source=theme-info&utm_campaign=beetle" target="_blank"><?php esc_html_e( 'Theme Demo', 'beetle' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/beetle-documentation/', 'beetle' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=beetle&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'beetle' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/beetle/reviews/?filter=5', 'beetle' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'beetle' ); ?></a>
 			</p>
