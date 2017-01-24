@@ -26,6 +26,9 @@ For more information about Beetle please go to https://themezee.com/themes/beetl
 
 == Changelog ==
 
+= 1.1.4 =
+* added centered layout in case no widgets were added to the sidebar
+
 = 1.1.3 =
 * added editor shortcuts and instant live preview for site title and tagline in Customizer
 * updated post pagination to use newer functions
