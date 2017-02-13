@@ -218,6 +218,30 @@ if ( ! function_exists( 'beetle_entry_meta' ) ) :
 endif;
 
 
+if ( ! function_exists( 'beetle_magazine_entry_meta' ) ) :
+	/**
+	 * Displays the date and author of magazine posts
+	 */
+	function beetle_magazine_entry_meta() {
+
+		$postmeta = beetle_meta_date();
+		$postmeta .= beetle_meta_author();
+
+		echo '<div class="entry-meta">' . $postmeta . '</div>';
+	}
+endif;
+
+
+if ( ! function_exists( 'beetle_magazine_entry_date' ) ) :
+	/**
+	 * Displays the date of magazine posts
+	 */
+	function beetle_magazine_entry_date() {
+		echo '<div class="entry-meta">' . beetle_meta_date() . '</div>';
+	}
+endif;
+
+
 if ( ! function_exists( 'beetle_meta_date' ) ) :
 	/**
 	 * Displays the post date

@@ -1,8 +1,8 @@
 <?php
 /**
- * Magazine Posts Columns Widget
+ * Magazine Columns Widget
  *
- * Display the latest posts from two categories in a 2-column layout.
+ * Display the latest posts from two categories in a two column layout.
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
  *
  * @package Beetle
@@ -21,21 +21,14 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 		// Setup Widget.
 		parent::__construct(
 			'beetle-magazine-posts-columns', // ID.
-			sprintf( esc_html__( 'Magazine Posts: 2 Columns (%s)', 'beetle' ), wp_get_theme()->Name ), // Name.
+			esc_html__( 'Magazine: Columns', 'beetle' ), // Name.
 			array(
-				'classname' => 'beetle_magazine_posts_columns',
+				'classname' => 'beetle-magazine-columns-widget',
 				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'beetle' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
-
-		// Delete Widget Cache on certain actions.
-		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
-		add_action( 'deleted_post', array( $this, 'delete_widget_cache' ) );
-		add_action( 'switch_theme', array( $this, 'delete_widget_cache' ) );
-
 	}
-
 
 	/**
 	 * Set default settings of the widget
@@ -49,14 +42,10 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 			'category_two_title'	=> '',
 			'number'				=> 4,
 			'highlight_post'		=> true,
-			'meta_date'				=> true,
-			'meta_author'			=> false,
 		);
 
 		return $defaults;
-
 	}
-
 
 	/**
 	 * Main Function to display the widget
@@ -67,22 +56,6 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 	 * @param array $instance / Settings for this widget instance.
 	 */
 	function widget( $args, $instance ) {
-
-		$cache = array();
-
-		// Get Widget Object Cache.
-		if ( ! $this->is_preview() ) {
-			$cache = wp_cache_get( 'widget_beetle_magazine_posts_columns', 'widget' );
-		}
-		if ( ! is_array( $cache ) ) {
-			$cache = array();
-		}
-
-		// Display Widget from Cache if exists.
-		if ( isset( $cache[ $this->id ] ) ) {
-			echo $cache[ $this->id ];
-			return;
-		}
 
 		// Start Output Buffering.
 		ob_start();
@@ -107,16 +80,9 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 		<?php
 		echo $args['after_widget'];
 
-		// Set Cache.
-		if ( ! $this->is_preview() ) {
-			$cache[ $this->id ] = ob_get_flush();
-			wp_cache_set( 'widget_beetle_magazine_posts_columns', $cache, 'widget' );
-		} else {
-			ob_end_flush();
-		}
-
-	} // widget()
-
+		// End Output Buffering.
+		ob_end_flush();
+	}
 
 	/**
 	 * Renders the Widget Content
@@ -176,11 +142,13 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 	 */
 	function magazine_posts( $settings, $category_id ) {
 
-		// Get latest posts from database.
+		// Get cached post ids.
+		$post_ids = beetle_get_magazine_post_ids( $this->id . '-cat-' . $category_id, $category_id, $settings['number'] );
+
+		// Fetch posts from database.
 		$query_arguments = array(
-			'posts_per_page' => (int) $settings['number'],
-			'ignore_sticky_posts' => true,
-			'cat' => (int) $category_id,
+			'post__in'            => $post_ids,
+			'no_found_rows'       => true,
 		);
 		$posts_query = new WP_Query( $query_arguments );
 		$i = 0;
@@ -196,46 +164,15 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 				$posts_query->the_post();
 
-				if ( true === $settings['highlight_post'] and ( isset( $i ) and 0 === $i ) ) : ?>
+				if ( true === $settings['highlight_post'] and 0 === $i ) :
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post clearfix' ); ?>>
+					get_template_part( 'template-parts/widgets/magazine-content', 'large-post' );
 
-						<header class="entry-header">
+				else :
 
-							<?php beetle_post_image( 'beetle-thumbnail-large' ); ?>
+					get_template_part( 'template-parts/widgets/magazine-content', 'small-post' );
 
-							<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-							<?php $this->entry_meta( $settings ); ?>
-
-						</header><!-- .entry-header -->
-
-						<div class="entry-content">
-							<?php the_excerpt(); ?>
-							<?php beetle_more_link(); ?>
-						</div><!-- .entry-content -->
-
-					</article>
-
-				<?php else : ?>
-
-					<article id="post-<?php the_ID(); ?>" <?php post_class( 'small-post clearfix' ); ?>>
-
-						<?php beetle_post_image( 'beetle-thumbnail-small' ); ?>
-
-						<div class="small-post-content">
-
-							<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-							<?php $this->entry_meta( $settings ); ?>
-
-						</div>
-
-					</article>
-
-				<?php
-				endif;
-				$i++;
+				endif; $i++;
 
 			endwhile;
 
@@ -246,39 +183,7 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 		// Reset Postdata.
 		wp_reset_postdata();
-
-	} // magazine_posts()
-
-
-	/**
-	 * Displays Entry Meta of Posts
-	 *
-	 * @param array $settings / Settings for this widget instance.
-	 */
-	function entry_meta( $settings ) {
-
-		$postmeta = '';
-
-		if ( true === $settings['meta_date'] ) {
-
-			$postmeta .= beetle_meta_date();
-
-		}
-
-		if ( true === $settings['meta_author'] ) {
-
-			$postmeta .= beetle_meta_author();
-
-		}
-
-		if ( $postmeta ) {
-
-			echo '<div class="entry-meta">' . $postmeta . '</div>';
-
-		}
-
-	} // entry_meta()
-
+	}
 
 	/**
 	 * Displays Category Widget Title
@@ -315,9 +220,7 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 			endif;
 
 		endif;
-
-	} // category_title()
-
+	}
 
 	/**
 	 * Update Widget Settings
@@ -335,14 +238,11 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 		$instance['category_two'] = (int) $new_instance['category_two'];
 		$instance['number'] = (int) $new_instance['number'];
 		$instance['highlight_post'] = ! empty( $new_instance['highlight_post'] );
-		$instance['meta_date'] = ! empty( $new_instance['meta_date'] );
-		$instance['meta_author'] = ! empty( $new_instance['meta_author'] );
 
-		$this->delete_widget_cache();
+		beetle_flush_magazine_post_ids();
 
 		return $instance;
 	}
-
 
 	/**
 	 * Displays Widget Settings Form in the Backend
@@ -410,31 +310,7 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 			</label>
 		</p>
 
-		<p>
-			<label for="<?php echo $this->get_field_id( 'meta_date' ); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_date'] ); ?> id="<?php echo $this->get_field_id( 'meta_date' ); ?>" name="<?php echo $this->get_field_name( 'meta_date' ); ?>" />
-				<?php esc_html_e( 'Display post date', 'beetle' ); ?>
-			</label>
-		</p>
-
-		<p>
-			<label for="<?php echo $this->get_field_id( 'meta_author' ); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_author'] ); ?> id="<?php echo $this->get_field_id( 'meta_author' ); ?>" name="<?php echo $this->get_field_name( 'meta_author' ); ?>" />
-				<?php esc_html_e( 'Display post author', 'beetle' ); ?>
-			</label>
-		</p>
-
-<?php
-	} // form()
-
-
-	/**
-	 * Delete Widget Cache
-	 */
-	public function delete_widget_cache() {
-
-		wp_cache_delete( 'widget_beetle_magazine_posts_columns', 'widget' );
-
+		<?php
 	}
 }
 
