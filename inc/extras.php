@@ -129,7 +129,9 @@ add_filter( 'excerpt_more', 'beetle_excerpt_more' );
 /**
  * Get Magazine Post IDs
  *
- * @param String $more_text Excerpt More Text.
+ * @param String $cache_id        Magazine Widget Instance.
+ * @param int    $category        Category ID.
+ * @param int    $number_of_posts Number of posts.
  * @return array Post IDs
  */
 function beetle_get_magazine_post_ids( $cache_id, $category, $number_of_posts ) {

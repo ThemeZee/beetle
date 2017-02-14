@@ -26,6 +26,10 @@ For more information about Beetle please go to https://themezee.com/themes/beetl
 
 == Changelog ==
 
+= 1.1.5 =
+* added template files for Magazine widgets to improve child theme compatibility
+* improved transient caching of Magazine widgets for increased performance
+
 = 1.1.4 =
 * added Magazine Homepage widgets to blog index
 * added centered layout in case no widgets were added to the sidebar

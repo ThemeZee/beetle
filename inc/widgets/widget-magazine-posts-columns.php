@@ -96,7 +96,11 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 	 * @param array $settings / Settings for this widget instance.
 	 */
 	function render( $args, $settings ) {
-	?>
+
+		// Get cached post ids.
+		$post_ids_category_one = beetle_get_magazine_post_ids( $this->id . '-left-category', $settings['category_one'], $settings['number'] );
+		$post_ids_category_two = beetle_get_magazine_post_ids( $this->id . '-right-category', $settings['category_two'], $settings['number'] );
+		?>
 
 		<div class="magazine-posts-column-left magazine-posts-columns clearfix">
 
@@ -106,7 +110,7 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 					$this->category_title( $args, $settings, $settings['category_one'], $settings['category_one_title'] ); ?>
 
 				<div class="magazine-posts-columns-post-list clearfix">
-					<?php $this->magazine_posts( $settings, $settings['category_one'] ); ?>
+					<?php $this->magazine_posts( $settings, $post_ids_category_one ); ?>
 				</div>
 
 			</div>
@@ -121,16 +125,15 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 					$this->category_title( $args, $settings, $settings['category_two'], $settings['category_two_title'] ); ?>
 
 				<div class="magazine-posts-columns-post-list clearfix">
-					<?php $this->magazine_posts( $settings, $settings['category_two'] ); ?>
+					<?php $this->magazine_posts( $settings, $post_ids_category_two ); ?>
 				</div>
 
 			</div>
 
 		</div>
 
-	<?php
-	} // render()
-
+		<?php
+	}
 
 	/**
 	 * Display Magazine Posts Loop
@@ -138,12 +141,9 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 	 * @used-by this->render()
 	 *
 	 * @param array $settings / Settings for this widget instance.
-	 * @param int   $category_id / ID of the selected category.
+	 * @param array $post_ids / Array with post ids.
 	 */
-	function magazine_posts( $settings, $category_id ) {
-
-		// Get cached post ids.
-		$post_ids = beetle_get_magazine_post_ids( $this->id . '-cat-' . $category_id, $category_id, $settings['number'] );
+	function magazine_posts( $settings, $post_ids ) {
 
 		// Fetch posts from database.
 		$query_arguments = array(
