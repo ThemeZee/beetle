@@ -21,7 +21,7 @@ class Beetle_Magazine_Posts_Grid_Widget extends WP_Widget {
 		// Setup Widget.
 		parent::__construct(
 			'beetle-magazine-posts-grid', // ID.
-			esc_html__( 'Magazine: Grid', 'beetle' ), // Name.
+			esc_html__( 'Magazine (Grid)', 'beetle' ), // Name.
 			array(
 				'classname' => 'beetle-magazine-grid-widget',
 				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'beetle' ),

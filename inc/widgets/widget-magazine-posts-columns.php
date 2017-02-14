@@ -21,7 +21,7 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 		// Setup Widget.
 		parent::__construct(
 			'beetle-magazine-posts-columns', // ID.
-			esc_html__( 'Magazine: Columns', 'beetle' ), // Name.
+			esc_html__( 'Magazine (Columns)', 'beetle' ), // Name.
 			array(
 				'classname' => 'beetle-magazine-columns-widget',
 				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'beetle' ),
