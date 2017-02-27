@@ -1390,6 +1390,24 @@ textarea {
 	display: none;
 }
 
+/* Hide post meta if they are deactivated in settings */
+body.date-hidden .entry-meta .meta-date,
+body.author-hidden .entry-meta .meta-author,
+body.categories-hidden .entry-meta .meta-category {
+	 position: absolute;
+	 clip: rect(1px, 1px, 1px, 1px);
+}
+
+body.author-hidden.categories-hidden .entry-meta .meta-date:after,
+body.categories-hidden .entry-meta .meta-author:after,
+body.author-hidden .widget-magazine-posts .entry-meta .meta-date:after {
+	display: none;
+}
+
+body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
+	display: none;
+}
+
 /* Entry Tags & Tagcloud Widget */
 .entry-tags {
 	clear: both;
