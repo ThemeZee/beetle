@@ -1404,7 +1404,8 @@ body.author-hidden .widget-magazine-posts .entry-meta .meta-date:after {
 	display: none;
 }
 
-body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
+body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta,
+body.date-hidden.author-hidden .widget-magazine-posts .entry-meta {
 	display: none;
 }
 
