@@ -14,7 +14,7 @@ jQuery( document ).ready(function($) {
 		slideshowSpeed: beetle_slider_params.speed,
 		namespace: "zeeflex-",
 		selector: ".zeeslides > li",
-		smoothHeight: true,
+		smoothHeight: false,
 		pauseOnHover: true,
 		controlNav: false,
 		controlsContainer: ".post-slider-controls"
