@@ -115,4 +115,5 @@ function beetle_flush_magazine_post_ids() {
 }
 add_action( 'save_post', 'beetle_flush_magazine_post_ids' );
 add_action( 'deleted_post', 'beetle_flush_magazine_post_ids' );
+add_action( 'customize_save_after', 'beetle_flush_magazine_post_ids' );
 add_action( 'switch_theme', 'beetle_flush_magazine_post_ids' );
