@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/beetle/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Beetle is a fast & elegant Lifestyle Magazine WordPress theme. It comes with a clean typography, subtle colors and works great with strong pictures. Beetle makes use of the Customizer and a few widget areas which allow you to easily set up your online magazine in just a few minutes.
-Version: 1.2.2
+Version: 1.2.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: beetle
@@ -663,10 +663,10 @@ textarea {
 .no-sidebar .content-area,
 .site-content .centered-content-area {
 	float: none;
-	padding: 0;
-	width: 100%;
-	max-width: 840px;
 	margin: 0 auto;
+	padding: 0;
+	max-width: 840px;
+	width: 100%;
 }
 
 /* Fullwidth Template */
@@ -674,8 +674,8 @@ textarea {
 	float: none;
 	margin: 0;
 	padding: 0;
-	width: 100%;
 	max-width: 100%;
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -715,7 +715,6 @@ textarea {
 .site-title a:link,
 .site-title a:visited {
 	color: #cc77bb;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -819,7 +818,6 @@ textarea {
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-family: 'Open Sans', Tahoma, Arial;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -870,7 +868,6 @@ textarea {
 	border-bottom: 1px solid rgba(255,255,255,0.1);
 	font-size: 13px;
 	font-size: 0.8125rem;
-	-webkit-transition: none;
 	transition: none;
 }
 
@@ -1059,7 +1056,6 @@ textarea {
 .widget-title a:link,
 .widget-title a:visited  {
 	color: #353535;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1286,7 +1282,6 @@ textarea {
 .entry-title a:visited {
 	color: #353535;
 	text-decoration: none;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1517,7 +1512,6 @@ body.date-hidden.author-hidden .widget-magazine-posts .entry-meta {
 .pagination a:link,
 .pagination a:visited {
 	color: #fff;
-	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
