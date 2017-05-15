@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/beetle/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Beetle is a fast & elegant Lifestyle Magazine WordPress theme. It comes with a clean typography, subtle colors and works great with strong pictures. Beetle makes use of the Customizer and a few widget areas which allow you to easily set up your online magazine in just a few minutes.
-Version: 1.2.3
+Version: 1.2.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: beetle
@@ -721,10 +721,6 @@ textarea {
 .site-title a:hover,
 .site-title a:active {
 	color: #353535;
-}
-
-.site-branding .custom-logo-link {
-	display: block;
 }
 
 .site-branding .custom-logo {
@@ -1917,6 +1913,10 @@ object {
 		float: none;
 		margin: 0;
 		text-align: center;
+	}
+
+	.site-branding .custom-logo {
+		margin: 0;
 	}
 
 	.header-widget {
