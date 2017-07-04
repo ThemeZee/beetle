@@ -24,7 +24,7 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 			esc_html__( 'Magazine (Columns)', 'beetle' ), // Name.
 			array(
 				'classname' => 'beetle-magazine-columns-widget',
-				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'beetle' ),
+				'description' => esc_html__( 'Displays your posts from two selected categories.', 'beetle' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -36,12 +36,12 @@ class Beetle_Magazine_Posts_Columns_Widget extends WP_Widget {
 	private function default_settings() {
 
 		$defaults = array(
-			'category_one'			=> 0,
-			'category_two'			=> 0,
-			'category_one_title'	=> '',
-			'category_two_title'	=> '',
-			'number'				=> 4,
-			'highlight_post'		=> true,
+			'category_one'       => 0,
+			'category_two'       => 0,
+			'category_one_title' => esc_html__( 'Left Category', 'beetle' ),
+			'category_two_title' => esc_html__( 'Right Category', 'beetle' ),
+			'number'             => 4,
+			'highlight_post'     => true,
 		);
 
 		return $defaults;
