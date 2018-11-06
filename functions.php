@@ -6,10 +6,11 @@
  */
 
 /**
- * Beetle only works in WordPress 4.4 or later.
+ * Beetle only works in WordPress 4.7 or later.
  */
-if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) {
+if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
+	return;
 }
 
 
@@ -54,17 +55,17 @@ if ( ! function_exists( 'beetle_setup' ) ) :
 
 		// Set up the WordPress core custom logo feature.
 		add_theme_support( 'custom-logo', apply_filters( 'beetle_custom_logo_args', array(
-			'height' => 40,
-			'width' => 250,
+			'height'      => 40,
+			'width'       => 250,
 			'flex-height' => true,
-			'flex-width' => true,
+			'flex-width'  => true,
 		) ) );
 
 		// Set up the WordPress core custom header feature.
-		add_theme_support('custom-header', apply_filters( 'beetle_custom_header_args', array(
+		add_theme_support( 'custom-header', apply_filters( 'beetle_custom_header_args', array(
 			'header-text' => false,
-			'width'	=> 1230,
-			'height' => 410,
+			'width'       => 1230,
+			'height'      => 410,
 			'flex-height' => true,
 		) ) );
 
@@ -77,6 +78,34 @@ if ( ! function_exists( 'beetle_setup' ) ) :
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		// Add custom color palette for Gutenberg.
+		add_theme_support( 'editor-color-palette', array(
+			array(
+				'name'  => esc_html_x( 'Primary', 'Gutenberg Color Palette', 'beetle' ),
+				'slug'  => 'primary',
+				'color' => apply_filters( 'beetle_primary_color', '#cc77bb' ),
+			),
+			array(
+				'name'  => esc_html_x( 'White', 'Gutenberg Color Palette', 'beetle' ),
+				'slug'  => 'white',
+				'color' => '#ffffff',
+			),
+			array(
+				'name'  => esc_html_x( 'Light Gray', 'Gutenberg Color Palette', 'beetle' ),
+				'slug'  => 'light-gray',
+				'color' => '#f0f0f0',
+			),
+			array(
+				'name'  => esc_html_x( 'Dark Gray', 'Gutenberg Color Palette', 'beetle' ),
+				'slug'  => 'dark-gray',
+				'color' => '#777777',
+			),
+			array(
+				'name'  => esc_html_x( 'Black', 'Gutenberg Color Palette', 'beetle' ),
+				'slug'  => 'black',
+				'color' => '#353535',
+			),
+		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'beetle_setup' );
@@ -102,35 +131,34 @@ add_action( 'after_setup_theme', 'beetle_content_width', 0 );
 function beetle_widgets_init() {
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Sidebar', 'beetle' ),
-		'id' => 'sidebar',
-		'description' => esc_html__( 'Appears on posts and pages except the full width template.', 'beetle' ),
+		'name'          => esc_html__( 'Sidebar', 'beetle' ),
+		'id'            => 'sidebar',
+		'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'beetle' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
-		'after_widget' => '</aside>',
-		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title' => '</h3></div>',
-	));
+		'after_widget'  => '</aside>',
+		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+		'after_title'   => '</h3></div>',
+	) );
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Header', 'beetle' ),
-		'id' => 'header',
-		'description' => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'beetle' ),
+		'name'          => esc_html__( 'Header', 'beetle' ),
+		'id'            => 'header',
+		'description'   => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'beetle' ),
 		'before_widget' => '<aside id="%1$s" class="header-widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="header-widget-title">',
-		'after_title' => '</h4>',
-	));
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="header-widget-title">',
+		'after_title'   => '</h4>',
+	) );
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Magazine Homepage', 'beetle' ),
-		'id' => 'magazine-homepage',
-		'description' => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'beetle' ),
+		'name'          => esc_html__( 'Magazine Homepage', 'beetle' ),
+		'id'            => 'magazine-homepage',
+		'description'   => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'beetle' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title' => '</h3></div>',
-	));
-
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+		'after_title'   => '</h3></div>',
+	) );
 }
 add_action( 'widgets_init', 'beetle_widgets_init' );
 
@@ -163,7 +191,6 @@ function beetle_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
 }
 add_action( 'wp_enqueue_scripts', 'beetle_scripts' );
 
@@ -172,12 +199,19 @@ add_action( 'wp_enqueue_scripts', 'beetle_scripts' );
  * Enqueue custom fonts.
  */
 function beetle_custom_fonts() {
-
-	// Register and Enqueue Theme Fonts.
 	wp_enqueue_style( 'beetle-custom-fonts', get_template_directory_uri() . '/assets/css/custom-fonts.css', array(), '20180413' );
-
 }
 add_action( 'wp_enqueue_scripts', 'beetle_custom_fonts', 1 );
+add_action( 'enqueue_block_editor_assets', 'beetle_custom_fonts', 1 );
+
+
+/**
+ * Enqueue editor styles for the new Gutenberg Editor.
+ */
+function beetle_block_editor_assets() {
+	wp_enqueue_style( 'beetle-editor-styles', get_theme_file_uri( '/assets/css/gutenberg-styles.css' ), array(), '20181102', 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'beetle_block_editor_assets' );
 
 
 /**
@@ -195,7 +229,6 @@ function beetle_add_image_sizes() {
 	add_image_size( 'beetle-thumbnail-small', 100, 80, true );
 	add_image_size( 'beetle-thumbnail-medium', 350, 250, true );
 	add_image_size( 'beetle-thumbnail-large', 420, 300, true );
-
 }
 add_action( 'after_setup_theme', 'beetle_add_image_sizes' );
 
