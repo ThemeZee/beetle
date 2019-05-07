@@ -26,6 +26,9 @@ For more information about Beetle please go to https://themezee.com/themes/beetl
 
 == Changelog ==
 
+= 1.5.2 =
+* added support for responsive embed blocks
+
 = 1.5.1 =
 * fixed link color in Gutenberg Editor
 * fixed styling of Read More button
