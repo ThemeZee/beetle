@@ -26,6 +26,9 @@ For more information about Beetle please go to https://themezee.com/themes/beetl
 
 == Changelog ==
 
+= 1.5.3 =
+* adjusted footer credit link with clearer wording
+
 = 1.5.2 =
 * added support for responsive embed blocks
 

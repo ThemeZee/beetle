@@ -358,10 +358,13 @@ function beetle_footer_text() {
 	?>
 
 	<span class="credit-link">
-		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'beetle' ),
-			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
-			'<a href="https://themezee.com/themes/beetle/" title="Beetle WordPress Theme">Beetle</a>'
-		); ?>
+		<?php
+		// translators: Theme Name and Link to ThemeZee.
+		printf( esc_html__( 'WordPress Theme: %1$s by %2$s.', 'beetle' ),
+			esc_html__( 'Beetle', 'beetle' ),
+			'<a href="https://themezee.com/" target="_blank" rel="nofollow">ThemeZee</a>'
+		);
+		?>
 	</span>
 
 	<?php
