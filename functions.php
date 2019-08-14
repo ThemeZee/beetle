@@ -237,6 +237,18 @@ add_action( 'after_setup_theme', 'beetle_add_image_sizes' );
 
 
 /**
+ * Make custom image sizes available in Gutenberg.
+ */
+function beetle_add_image_size_names( $sizes ) {
+	return array_merge( $sizes, array(
+		'post-thumbnail'         => esc_html__( 'Beetle Single Post', 'beetle' ),
+		'beetle-thumbnail-large' => esc_html__( 'Beetle Magazine Post', 'beetle' ),
+	) );
+}
+add_filter( 'image_size_names_choose', 'beetle_add_image_size_names' );
+
+
+/**
  * Include Files
  */
 
