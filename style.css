@@ -1292,7 +1292,7 @@ textarea {
 }
 
 .tz-magazine-block .tz-meta-field {
-	margin-right: 0;
+	margin-right: 0.2em;
 }
 
 .tz-magazine-block .tz-meta-field a {
@@ -1306,6 +1306,32 @@ textarea {
 
 .tz-magazine-block .tz-more-link {
 	text-decoration: none;
+}
+
+/* Deactivate post meta theme settings for Magazine blocks */
+body.date-hidden.author-hidden.categories-hidden .content-area .tz-magazine-block .tz-entry-meta,
+body.date-hidden.comments-hidden.categories-hidden .content-single .tz-magazine-block .tz-entry-meta {
+	display: block;
+}
+
+body.author-hidden.categories-hidden .tz-magazine-block .tz-entry-meta .meta-date:after,
+body.categories-hidden .tz-magazine-block .tz-entry-meta .meta-author:after {
+	display: inline-block;
+}
+
+body .site .tz-magazine-block .tz-entry-meta .tz-meta-field:last-child:after {
+	display: none;
+}
+
+body.date-hidden .tz-magazine-block .type-post .tz-entry-meta .tz-meta-date,
+body.author-hidden .tz-magazine-block .type-post .tz-entry-meta .tz-meta-author,
+body.categories-hidden .tz-magazine-block .type-post .tz-entry-meta .tz-meta-categories,
+body.comments-hidden .tz-magazine-block .type-post .tz-entry-meta .tz-meta-comments {
+	position: static;
+	overflow: visible;
+	clip: auto;
+	width: auto;
+	height: auto;
 }
 
 /*--------------------------------------------------------------
