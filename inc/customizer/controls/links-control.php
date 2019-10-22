@@ -43,13 +43,13 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/beetle/', 'beetle' ) ); ?>" target="_blank">
-						<?php esc_html_e( 'Support Forum', 'beetle' ); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=beetle/', 'beetle' ) ); ?>" target="_blank">
+						<?php esc_html_e( 'Theme Changelog', 'beetle' ); ?>
 					</a>
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/beetle/reviews/?filter=5', 'beetle' ) ); ?>" target="_blank">
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/beetle/reviews/', 'beetle' ) ); ?>" target="_blank">
 						<?php esc_html_e( 'Rate this theme', 'beetle' ); ?>
 					</a>
 				</p>

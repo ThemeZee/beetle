@@ -47,7 +47,8 @@ function beetle_theme_info_page() {
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/beetle/', 'beetle' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=beetle&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'beetle' ); ?></a>
 				<a href="http://preview.themezee.com/?demo=beetle&utm_source=theme-info&utm_campaign=beetle" target="_blank"><?php esc_html_e( 'Theme Demo', 'beetle' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/beetle-documentation/', 'beetle' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=beetle&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'beetle' ); ?></a>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/beetle/reviews/?filter=5', 'beetle' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'beetle' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=beetle', 'beetle' ) ); ?>" target="_blank"><?php esc_html_e( 'Theme Changelog', 'beetle' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/beetle/reviews/', 'beetle' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'beetle' ); ?></a>
 			</p>
 		</div>
 		<hr>
@@ -150,7 +151,7 @@ function beetle_theme_info_page() {
 				<?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'beetle' ),
 					$theme->display( 'Name' ),
 					'<a target="_blank" href="' . __( 'https://themezee.com/', 'beetle' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=beetle" title="ThemeZee">ThemeZee</a>',
-					'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/beetle/reviews/?filter=5', 'beetle' ) . '" title="' . esc_attr__( 'Review Beetle', 'beetle' ) . '">' . esc_html__( 'rate it', 'beetle' ) . '</a>'
+					'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/beetle/reviews/', 'beetle' ) . '" title="' . esc_attr__( 'Review Beetle', 'beetle' ) . '">' . esc_html__( 'rate it', 'beetle' ) . '</a>'
 				); ?>
 			</p>
 
