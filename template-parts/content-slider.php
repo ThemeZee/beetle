@@ -9,7 +9,7 @@
 
 <li id="slide-<?php the_ID(); ?>" class="zeeslide clearfix">
 
-	<?php beetle_slider_image( 'beetle-header-image', array( 'class' => 'slide-image' ) ); ?>
+	<?php beetle_slider_image( 'beetle-header-image', array( 'class' => 'slide-image', 'loading' => false ) ); ?>
 
 	<div class="slide-post clearfix">
 
