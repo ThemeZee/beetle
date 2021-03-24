@@ -143,7 +143,7 @@
 		$( '#main-navigation' ).responsiveMenu( {
 			menuClass: 'main-navigation-menu',
 			toggleClass: 'main-navigation-toggle',
-			toggleText: beetle_menu_title,
+			toggleText: beetle_menu_title.text,
 			maxWidth: '60em'
 		} );
 
