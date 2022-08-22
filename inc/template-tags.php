@@ -362,7 +362,7 @@ function beetle_footer_text() {
 		// translators: Theme Name and Link to ThemeZee.
 		printf( esc_html__( 'WordPress Theme: %1$s by %2$s.', 'beetle' ),
 			esc_html__( 'Beetle', 'beetle' ),
-			'<a href="https://themezee.com/" target="_blank" rel="nofollow">ThemeZee</a>'
+			'ThemeZee'
 		);
 		?>
 	</span>
